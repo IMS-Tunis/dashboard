@@ -1,26 +1,32 @@
 {
-    "frame1": [
-        {"name": "Math Resource 1", "url": "https://example.com/math1"},
-        {"name": "Math Resource 2", "url": "https://example.com/math2"}
-    ],
-    "frame2": [
-        {"name": "French Resource 1", "url": "https://example.com/french1"},
-        {"name": "French Resource 2", "url": "https://example.com/french2"}
-    ],
-    "frame3": [
-        {"name": "Science Resource 1", "url": "https://example.com/science1"},
-        {"name": "Science Resource 2", "url": "https://example.com/science2"}
-    ],
-    "frame4": [
-        {"name": "History Resource 1", "url": "https://example.com/history1"},
-        {"name": "History Resource 2", "url": "https://example.com/history2"}
-    ],
-    "frame5": [
-        {"name": "Geography Resource 1", "url": "https://example.com/geography1"},
-        {"name": "Geography Resource 2", "url": "https://example.com/geography2"}
-    ],
-    "frame6": [
-        {"name": "Music Resource 1", "url": "https://example.com/music1"},
-        {"name": "Music Resource 2", "url": "https://example.com/music2"}
-    ]
+    "attendance": {
+        "year0": "https://example.com/attendance/year0",
+        "year1": "https://example.com/attendance/year1",
+        "year2": "https://example.com/attendance/year2",
+        "year3": "https://example.com/attendance/year3",
+        "year4": "https://example.com/attendance/year4",
+        "year5": "https://example.com/attendance/year5",
+        "year6": "https://example.com/attendance/year6",
+        "year7": "https://example.com/attendance/year7",
+        "year8": "https://example.com/attendance/year8",
+        "year9": "https://example.com/attendance/year9",
+        "year10": "https://example.com/attendance/year10",
+        "year11": "https://example.com/attendance/year11",
+        "year12": "https://example.com/attendance/year12",
+        "year13": "https://example.com/attendance/year13"
+    },
+    "weeklyReports": "https://example.com/weekly-reports",
+    "gradeSubmission": {
+        "passcode1": "https://example.com/grade-submission/subject1",
+        "passcode2": "https://example.com/grade-submission/subject2"
+    },
+    "reportCards": {
+        "passcode1": "https://example.com/report-cards/subject1",
+        "passcode2": "https://example.com/report-cards/subject2"
+    },
+    "studentLists": "https://example.com/student-lists",
+    "schoolDatabase": {
+        "passcode1": "https://example.com/school-database/admin",
+        "passcode2": "https://example.com/school-database/hr"
+    }
 }
