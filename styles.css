@@ -25,12 +25,12 @@ body {
 }
 
 .header-logo {
-    width: 100px;
+    width: 150px; /* Increase the size of the images */
     height: auto;
 }
 
 .header-title {
-    font-size: 32px;
+    font-size: 36px; /* Increase the size of the heading */
     text-align: center;
     flex-grow: 1;
 }
