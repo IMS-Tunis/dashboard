@@ -25,12 +25,21 @@ body {
 }
 
 .header-logo {
-    width: 150px; /* Increase the size of the images */
     height: auto;
 }
 
+.left-logo {
+    width: 130px;
+    margin-right: 50px; /* Adjust this value to move the image closer to the center */
+}
+
+.right-logo {
+    width: 180px; /* Made the right image larger */
+    margin-left: 50px; /* Adjust this value to move the image closer to the center */
+}
+
 .header-title {
-    font-size: 36px; /* Increase the size of the heading */
+    font-size: 36px;
     text-align: center;
     flex-grow: 1;
 }
@@ -91,6 +100,24 @@ body {
 
 .frame button:hover {
     background-color: #218838;
+}
+
+/* Select Dropdown */
+.frame select {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
 }
 
 /* Table Styling for Results Page */
