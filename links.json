@@ -1,0 +1,26 @@
+{
+    "frame1": [
+        {"name": "Math Resource 1", "url": "https://example.com/math1"},
+        {"name": "Math Resource 2", "url": "https://example.com/math2"}
+    ],
+    "frame2": [
+        {"name": "French Resource 1", "url": "https://example.com/french1"},
+        {"name": "French Resource 2", "url": "https://example.com/french2"}
+    ],
+    "frame3": [
+        {"name": "Science Resource 1", "url": "https://example.com/science1"},
+        {"name": "Science Resource 2", "url": "https://example.com/science2"}
+    ],
+    "frame4": [
+        {"name": "History Resource 1", "url": "https://example.com/history1"},
+        {"name": "History Resource 2", "url": "https://example.com/history2"}
+    ],
+    "frame5": [
+        {"name": "Geography Resource 1", "url": "https://example.com/geography1"},
+        {"name": "Geography Resource 2", "url": "https://example.com/geography2"}
+    ],
+    "frame6": [
+        {"name": "Music Resource 1", "url": "https://example.com/music1"},
+        {"name": "Music Resource 2", "url": "https://example.com/music2"}
+    ]
+}

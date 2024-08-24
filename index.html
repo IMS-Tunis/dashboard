@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Links Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Frame 1 -->
+        <div class="frame">
+            <h2>Frame 1</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code1" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code1', 'frame1')">Go to Results</button>
+        </div>
+        <!-- Frame 2 -->
+        <div class="frame">
+            <h2>Frame 2</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code2" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code2', 'frame2')">Go to Results</button>
+        </div>
+        <!-- Frame 3 -->
+        <div class="frame">
+            <h2>Frame 3</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code3" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code3', 'frame3')">Go to Results</button>
+        </div>
+        <!-- Frame 4 -->
+        <div class="frame">
+            <h2>Frame 4</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code4" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code4', 'frame4')">Go to Results</button>
+        </div>
+        <!-- Frame 5 -->
+        <div class="frame">
+            <h2>Frame 5</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code5" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code5', 'frame5')">Go to Results</button>
+        </div>
+        <!-- Frame 6 -->
+        <div class="frame">
+            <h2>Frame 6</h2>
+            <p class="note">Enter the passcode to access the links.</p>
+            <input type="text" id="code6" placeholder="Enter Passcode">
+            <button onclick="checkPasscode('code6', 'frame6')">Go to Results</button>
+        </div>
+    </div>
+
+    <script>
+        async function checkPasscode(inputId, frameId) {
+            const passcode = document.getElementById(inputId).value;
+
+            try {
+                const response = await fetch('passcodes.json');
+                const passcodes = await response.json();
+
+                if (passcode === passcodes[inputId]) {
+                    // Redirect to the results page with the correct frame ID
+                    window.location.href = `results.html?frame=${frameId}`;
+                } else {
+                    alert("Incorrect passcode. Please try again.");
+                }
+            } catch (error) {
+                console.error('Error fetching the passcodes:', error);
+                alert("There was an error verifying the passcode. Please try again later.");
+            }
+        }
+    </script>
+</body>
+</html>

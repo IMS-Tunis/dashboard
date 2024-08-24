@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Teacher Links</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody id="resultsTable">
+            <!-- Results will be dynamically injected here -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const frame = urlParams.get('frame');
+
+            fetch('links.json')
+                .then(response => response.json())
+                .then(data => {
+                    const resultsTable = document.getElementById('resultsTable');
+                    const links = data[frame] || [];
+
+                    links.forEach(link => {
+                        const row = document.createElement('tr');
+                        const titleCell = document.createElement('td');
+                        titleCell.textContent = link.name;
+                        const linkCell = document.createElement('td');
+                        const anchor = document.createElement('a');
+                        anchor.href = link.url;
+                        anchor.textContent = link.url;
+                        linkCell.appendChild(anchor);
+
+                        row.appendChild(titleCell);
+                        row.appendChild(linkCell);
+                        resultsTable.appendChild(row);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading the JSON file:', error);
+                    alert("There was an error loading the links. Please try again later.");
+                });
+        });
+    </script>
+</body>
+</html>
