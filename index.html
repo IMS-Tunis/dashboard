@@ -8,74 +8,135 @@
 </head>
 <body>
     <header class="header">
-        <img src="vectmaarif.png" alt="Maarif Logo" class="header-logo">
+        <img src="vectmaarif.png" alt="Maarif Logo" class="header-logo left-logo">
         <h1 class="header-title">IMST Dashboard 2024-2025</h1>
-        <img src="vectcambridge.png" alt="Cambridge Logo" class="header-logo">
+        <img src="vectcambridge.png" alt="Cambridge Logo" class="header-logo right-logo">
     </header>
 
     <div class="container">
-        <!-- Frame 1 -->
+        <!-- Frame 1 - Attendance -->
         <div class="frame">
-            <h2>Frame 1</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code1" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code1', 'frame1')">Go to Results</button>
+            <h2>Attendance</h2>
+            <p class="note">Select the year to access the attendance sheet.</p>
+            <select id="yearSelect">
+                <option value="year0">Year 0</option>
+                <option value="year1">Year 1</option>
+                <option value="year2">Year 2</option>
+                <option value="year3">Year 3</option>
+                <option value="year4">Year 4</option>
+                <option value="year5">Year 5</option>
+                <option value="year6">Year 6</option>
+                <option value="year7">Year 7</option>
+                <option value="year8">Year 8</option>
+                <option value="year9">Year 9</option>
+                <option value="year10">Year 10</option>
+                <option value="year11">Year 11</option>
+                <option value="year12">Year 12</option>
+                <option value="year13">Year 13</option>
+            </select>
+            <button onclick="accessAttendance()">Access Attendance</button>
         </div>
-        <!-- Frame 2 -->
+
+        <!-- Frame 2 - Weekly Reports -->
         <div class="frame">
-            <h2>Frame 2</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code2" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code2', 'frame2')">Go to Results</button>
+            <h2>Weekly Reports</h2>
+            <p class="note">Access the weekly reports here.</p>
+            <button onclick="accessWeeklyReports()">Go to Reports</button>
         </div>
-        <!-- Frame 3 -->
+
+        <!-- Frame 3 - Grade Submission -->
         <div class="frame">
-            <h2>Frame 3</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code3" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code3', 'frame3')">Go to Results</button>
+            <h2>Grade Submission</h2>
+            <p class="note">Teachers can insert their passcode to access their subjects and submit their grades.</p>
+            <input type="text" id="gradePasscode" placeholder="Enter Passcode">
+            <button onclick="accessGradeSubmission()">Access Grade Sheets</button>
         </div>
-        <!-- Frame 4 -->
+
+        <!-- Frame 4 - Report Cards -->
         <div class="frame">
-            <h2>Frame 4</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code4" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code4', 'frame4')">Go to Results</button>
+            <h2>Report Cards</h2>
+            <p class="note">Homeroom teachers can access the report cards for a check before printing.</p>
+            <input type="text" id="reportPasscode" placeholder="Enter Passcode">
+            <button onclick="accessReportCards()">Access Report Cards</button>
         </div>
-        <!-- Frame 5 -->
+
+        <!-- Frame 5 - Students Lists -->
         <div class="frame">
-            <h2>Frame 5</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code5" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code5', 'frame5')">Go to Results</button>
+            <h2>Students Lists</h2>
+            <p class="note">Teachers can access the list of students.</p>
+            <button onclick="accessStudentLists()">Access Students Lists</button>
         </div>
-        <!-- Frame 6 -->
+
+        <!-- Frame 6 - School Database -->
         <div class="frame">
-            <h2>Frame 6</h2>
-            <p class="note">Enter the passcode to access the links.</p>
-            <input type="text" id="code6" placeholder="Enter Passcode">
-            <button onclick="checkPasscode('code6', 'frame6')">Go to Results</button>
+            <h2>School Database</h2>
+            <p class="note">Admin officers and HR can access our school database.</p>
+            <input type="text" id="databasePasscode" placeholder="Enter Passcode">
+            <button onclick="accessSchoolDatabase()">Access Database</button>
         </div>
     </div>
 
+    <footer class="footer">
+        <p>Admin staff have a supercode to access everything.</p>
+    </footer>
+
     <script>
-        async function checkPasscode(inputId, frameId) {
-            const passcode = document.getElementById(inputId).value;
+        function accessAttendance() {
+            const year = document.getElementById('yearSelect').value;
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.attendance[year];
+                    window.location.href = url;
+                });
+        }
 
-            try {
-                const response = await fetch('passcodes.json');
-                const passcodes = await response.json();
+        function accessWeeklyReports() {
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.weeklyReports;
+                    window.location.href = url;
+                });
+        }
 
-                if (passcode === passcodes[inputId]) {
-                    // Redirect to the results page with the correct frame ID
-                    window.location.href = `results.html?frame=${frameId}`;
-                } else {
-                    alert("Incorrect passcode. Please try again.");
-                }
-            } catch (error) {
-                console.error('Error fetching the passcodes:', error);
-                alert("There was an error verifying the passcode. Please try again later.");
-            }
+        function accessGradeSubmission() {
+            const passcode = document.getElementById('gradePasscode').value;
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.gradeSubmission[passcode];
+                    window.location.href = url;
+                });
+        }
+
+        function accessReportCards() {
+            const passcode = document.getElementById('reportPasscode').value;
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.reportCards[passcode];
+                    window.location.href = url;
+                });
+        }
+
+        function accessStudentLists() {
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.studentLists;
+                    window.location.href = url;
+                });
+        }
+
+        function accessSchoolDatabase() {
+            const passcode = document.getElementById('databasePasscode').value;
+            fetch('links.json')
+                .then(response => response.json())
+                .then(links => {
+                    const url = links.schoolDatabase[passcode];
+                    window.location.href = url;
+                });
         }
     </script>
 </body>
