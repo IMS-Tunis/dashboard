@@ -1,40 +1,54 @@
 {
     "1234": {
+        "name": "John Doe",
+        "email": "johndoe@example.com",
         "years": {
             "3": ["EN", "MA", "SC"],
             "4": ["EN"]
         }
     },
     "5678": {
+        "name": "Jane Smith",
+        "email": "janesmith@example.com",
         "years": {
             "5": ["PH", "BI", "CH"],
             "6": ["BU", "IC"]
         }
     },
     "4321": {
+        "name": "Michael Johnson",
+        "email": "michaeljohnson@example.com",
         "years": {
             "7": ["EN", "MA"],
             "8": ["PH", "SC"]
         }
     },
     "8765": {
+        "name": "Emily Davis",
+        "email": "emilydavis@example.com",
         "years": {
             "9": ["CH", "AR"],
             "10": ["FR", "IS"]
         }
     },
     "9876": {
+        "name": "Sarah Brown",
+        "email": "sarahbrown@example.com",
         "years": {
             "11": ["EN", "GP"],
             "12": ["TU", "PE"]
         }
     },
     "5432": {
+        "name": "James Wilson",
+        "email": "jameswilson@example.com",
         "years": {
             "13": ["ART", "MU"]
         }
     },
     "admin": {
+        "name": "Admin User",
+        "email": "admin@example.com",
         "years": {
             "3": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "4": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
