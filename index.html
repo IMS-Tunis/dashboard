@@ -81,58 +81,52 @@
     </footer>
 
     <script>
-        async function fetchJSON(filename) {
-            const response = await fetch(filename);
+        async function fetchJson(file) {
+            const response = await fetch(file);
             return await response.json();
         }
 
         async function accessAttendance() {
             const year = document.getElementById('yearSelect').value;
-            const links = await fetchJSON('links.json');
-            window.location.href = links[`attendance_link_for_${year}`];
+            const links = await fetchJson('links.json');
+            const url = links[`attendance_sheet_${year}`];
+            window.location.href = url;
         }
 
         async function accessWeeklyReports() {
-            const links = await fetchJSON('links.json');
-            window.location.href = links.weekly_reports_link;
+            const links = await fetchJson('links.json');
+            const url = links.weekly_reports_link;
+            window.location.href = url;
         }
 
         async function accessGradeSubmission() {
             const passcode = document.getElementById('gradePasscode').value;
-            const passcodes = await fetchJSON('passcodes.json');
-            const links = await fetchJSON('links.json');
-            if (passcodes[`grade_passcode_${passcode}`]) {
-                window.location.href = links[`grade_submission_link_for_passcode_${passcode}`];
-            } else {
-                alert("Invalid passcode.");
-            }
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
+            const url = links[`grade_submission_link_${passcodes[passcode]}`];
+            window.location.href = url;
         }
 
         async function accessReportCards() {
             const passcode = document.getElementById('reportPasscode').value;
-            const passcodes = await fetchJSON('passcodes.json');
-            const links = await fetchJSON('links.json');
-            if (passcodes[`report_passcode_${passcode}`]) {
-                window.location.href = links[`report_card_link_for_passcode_${passcode}`];
-            } else {
-                alert("Invalid passcode.");
-            }
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
+            const url = links[`report_cards_link_${passcodes[passcode]}`];
+            window.location.href = url;
         }
 
         async function accessStudentLists() {
-            const links = await fetchJSON('links.json');
-            window.location.href = links.student_lists_link;
+            const links = await fetchJson('links.json');
+            const url = links.student_lists_link;
+            window.location.href = url;
         }
 
         async function accessSchoolDatabase() {
             const passcode = document.getElementById('databasePasscode').value;
-            const passcodes = await fetchJSON('passcodes.json');
-            const links = await fetchJSON('links.json');
-            if (passcodes[`database_passcode_${passcode}`]) {
-                window.location.href = links[`school_database_link_for_passcode_${passcode}`];
-            } else {
-                alert("Invalid passcode.");
-            }
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
+            const url = links[`school_database_link_${passcodes[passcode]}`];
+            window.location.href = url;
         }
     </script>
 </body>
