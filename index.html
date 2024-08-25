@@ -17,7 +17,7 @@
         <!-- Frame 1 - Attendance -->
         <div class="frame">
             <h2>Attendance</h2>
-            <p class="note">Select the year to access the attendance sheet.</p>
+            <p class="note">Teachers must fill in attendance at the end of the first session. Nurses must record the reason for absence.</p>
             <select id="yearSelect">
                 <option value="year0">Year 0</option>
                 <option value="year1">Year 1</option>
@@ -40,8 +40,8 @@
         <!-- Frame 2 - Weekly Reports -->
         <div class="frame">
             <h2>Weekly Reports</h2>
-            <p class="note">Access the weekly reports here.</p>
-            <button onclick="accessWeeklyReports()">Go to Reports</button>
+            <p class="note">Weekly reports will be automatically sent every Thursday at 17:00.</p>
+            <button onclick="accessWeeklyReports()" id="weeklyReportBtn">Go to Reports</button>
         </div>
 
         <!-- Frame 3 - Grade Submission -->
@@ -66,13 +66,13 @@
         <div class="frame">
             <h2>Students Lists</h2>
             <p class="note">Teachers can access the list of students.</p>
-            <button onclick="accessStudentLists()">Access Students Lists</button>
+            <button onclick="accessStudentLists()" id="studentListBtn">Access Students Lists</button>
         </div>
 
         <!-- Frame 6 - School Database -->
         <div class="frame">
             <h2>School Database</h2>
-            <p class="note">Admin officers and HR can access our school database.</p>
+            <p class="note">Admin officers can access our school database.</p>
             <input type="text" id="databasePasscode" placeholder="Enter Passcode">
             <button onclick="accessSchoolDatabase()">Access Database</button>
         </div>
@@ -98,7 +98,7 @@
         async function accessWeeklyReports() {
             const links = await fetchJson('links.json');
             const url = links.weekly_reports_link;
-            window.location.href = url;
+            window.open(url, '_blank'); // Opens in a new tab
         }
 
         function redirectToResults() {
@@ -109,23 +109,27 @@
         async function accessReportCards() {
             const passcode = document.getElementById('reportPasscode').value;
             const passcodes = await fetchJson('passcodes.json');
-            const links = await fetchJson('links.json');
-            const url = links[`report_cards_link_${passcodes[passcode]}`];
-            window.location.href = url;
+            if (passcodes[passcode]) {
+                window.location.href = `results.html?passcode=${passcode}`;
+            } else {
+                window.location.href = `results.html?error=invalid_passcode`;
+            }
         }
 
         async function accessStudentLists() {
             const links = await fetchJson('links.json');
             const url = links.student_lists_link;
-            window.location.href = url;
+            window.open(url, '_blank'); // Opens in a new tab
         }
 
         async function accessSchoolDatabase() {
             const passcode = document.getElementById('databasePasscode').value;
             const passcodes = await fetchJson('passcodes.json');
-            const links = await fetchJson('links.json');
-            const url = links[`school_database_link_${passcodes[passcode]}`];
-            window.location.href = url;
+            if (passcodes[passcode]) {
+                window.location.href = `results.html?passcode=${passcode}`;
+            } else {
+                window.location.href = `results.html?error=invalid_passcode`;
+            }
         }
     </script>
 </body>
