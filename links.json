@@ -24,9 +24,9 @@
         "passcode1": "https://example.com/report-cards/subject1",
         "passcode2": "https://example.com/report-cards/subject2"
     },
-    "studentLists": "https://example.com/student-lists",
+    "studentLists": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETctFyqP7YJIvJi84sjrFGcBFU7D0yLzCiPLv7mSzrY-eA?e=shN7jW
+",
     "schoolDatabase": {
-        "passcode1": "https://example.com/school-database/admin",
-        "passcode2": "https://example.com/school-database/hr"
+        "passcode1": "567",
     }
 }
