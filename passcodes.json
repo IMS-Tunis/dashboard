@@ -1,8 +1,6 @@
 {
-    "code1": "MathTeacher",
-    "code2": "FrenchTeacher",
-    "code3": "ScienceTeacher",
-    "code4": "HistoryTeacher",
-    "code5": "GeographyTeacher",
-    "code6": "MusicTeacher"
+    "1234": "subject1",
+    "5678": "subject2",
+    "4321": "admin",
+    "8765": "hr"
 }
