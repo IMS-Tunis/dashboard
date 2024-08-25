@@ -48,8 +48,10 @@
         <div class="frame">
             <h2>Grade Submission</h2>
             <p class="note">Each teacher has a passcode to access and submit grades for their subjects.</p>
-            <input type="text" id="gradePasscode" placeholder="Enter Passcode">
-            <button onclick="accessGradeSubmission()">Access Grade Sheets</button>
+            <form onsubmit="redirectToResults(); return false;">
+                <input type="text" id="passcode" placeholder="Enter Passcode" required>
+                <button type="submit">Access Sheets</button>
+            </form>
         </div>
 
         <!-- Frame 4 - Report Cards -->
@@ -99,12 +101,9 @@
             window.location.href = url;
         }
 
-        async function accessGradeSubmission() {
-            const passcode = document.getElementById('gradePasscode').value;
-            const passcodes = await fetchJson('passcodes.json');
-            const links = await fetchJson('links.json');
-            const url = links[`grade_submission_link_${passcodes[passcode]}`];
-            window.location.href = url;
+        function redirectToResults() {
+            const passcode = document.getElementById('passcode').value;
+            window.location.href = `results.html?passcode=${passcode}`;
         }
 
         async function accessReportCards() {
