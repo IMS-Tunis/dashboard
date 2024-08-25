@@ -30,12 +30,12 @@ body {
 
 .left-logo {
     width: 130px;
-    margin-right: 50px; /* Adjust this value to move the image closer to the center */
+    margin-right: 70px; /* Increased space to move the image further from the border */
 }
 
 .right-logo {
-    width: 180px; /* Made the right image larger */
-    margin-left: 50px; /* Adjust this value to move the image closer to the center */
+    width: 200px; /* Made the right image larger */
+    margin-left: 70px; /* Increased space to move the image further from the border */
 }
 
 .header-title {
@@ -133,18 +133,4 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+    text
