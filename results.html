@@ -26,6 +26,13 @@
         async function displayResults(passcode) {
             const passcodes = await fetchJson('passcodes.json');
             const links = await fetchJson('links.json');
+            const urlParams = new URLSearchParams(window.location.search);
+            const error = urlParams.get('error');
+
+            if (error === 'invalid_passcode') {
+                document.getElementById('results').innerHTML = '<p>Invalid passcode. Please try again.</p>';
+                return;
+            }
 
             if (passcodes[passcode]) {
                 const assignedSubjects = passcodes[passcode].years;
