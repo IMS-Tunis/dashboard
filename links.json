@@ -1,32 +1,24 @@
 {
-    "attendance": {
-        "year0": "https://example.com/attendance/year0",
-        "year1": "https://example.com/attendance/year1",
-        "year2": "https://example.com/attendance/year2",
-        "year3": "https://example.com/attendance/year3",
-        "year4": "https://example.com/attendance/year4",
-        "year5": "https://example.com/attendance/year5",
-        "year6": "https://example.com/attendance/year6",
-        "year7": "https://example.com/attendance/year7",
-        "year8": "https://example.com/attendance/year8",
-        "year9": "https://example.com/attendance/year9",
-        "year10": "https://example.com/attendance/year10",
-        "year11": "https://example.com/attendance/year11",
-        "year12": "https://example.com/attendance/year12",
-        "year13": "https://example.com/attendance/year13"
-    },
-    "weeklyReports": "https://example.com/weekly-reports",
-    "gradeSubmission": {
-        "passcode1": "https://example.com/grade-submission/subject1",
-        "passcode2": "https://example.com/grade-submission/subject2"
-    },
-    "reportCards": {
-        "passcode1": "https://example.com/report-cards/subject1",
-        "passcode2": "https://example.com/report-cards/subject2"
-    },
-    "studentLists": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETctFyqP7YJIvJi84sjrFGcBFU7D0yLzCiPLv7mSzrY-eA?e=shN7jW
-",
-    "schoolDatabase": {
-        "passcode1": "567",
-    }
+    "attendance_sheet_year0": "https://example.com/attendance/year0",
+    "attendance_sheet_year1": "https://example.com/attendance/year1",
+    "attendance_sheet_year2": "https://example.com/attendance/year2",
+    "attendance_sheet_year3": "https://example.com/attendance/year3",
+    "attendance_sheet_year4": "https://example.com/attendance/year4",
+    "attendance_sheet_year5": "https://example.com/attendance/year5",
+    "attendance_sheet_year6": "https://example.com/attendance/year6",
+    "attendance_sheet_year7": "https://example.com/attendance/year7",
+    "attendance_sheet_year8": "https://example.com/attendance/year8",
+    "attendance_sheet_year9": "https://example.com/attendance/year9",
+    "attendance_sheet_year10": "https://example.com/attendance/year10",
+    "attendance_sheet_year11": "https://example.com/attendance/year11",
+    "attendance_sheet_year12": "https://example.com/attendance/year12",
+    "attendance_sheet_year13": "https://example.com/attendance/year13",
+    "weekly_reports_link": "https://example.com/weekly-reports",
+    "grade_submission_link_subject1": "https://example.com/grade-submission/subject1",
+    "grade_submission_link_subject2": "https://example.com/grade-submission/subject2",
+    "report_cards_link_subject1": "https://example.com/report-cards/subject1",
+    "report_cards_link_subject2": "https://example.com/report-cards/subject2",
+    "student_lists_link": "https://example.com/student-lists",
+    "school_database_link_admin": "https://example.com/school-database/admin",
+    "school_database_link_hr": "https://example.com/school-database/hr"
 }
