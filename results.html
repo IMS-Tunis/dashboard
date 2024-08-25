@@ -3,54 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results - Teacher Links</title>
+    <title>Grade Submission Results</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Results</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Link</th>
-            </tr>
-        </thead>
-        <tbody id="resultsTable">
-            <!-- Results will be dynamically injected here -->
-        </tbody>
-    </table>
+    <header class="header">
+        <img src="vectmaarif.png" alt="Maarif Logo" class="header-logo left-logo">
+        <h1 class="header-title">Grade Submission Results</h1>
+        <img src="vectcambridge.png" alt="Cambridge Logo" class="header-logo right-logo">
+    </header>
+
+    <div id="results" class="container">
+        <!-- Results will be dynamically inserted here -->
+    </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const frame = urlParams.get('frame');
+        async function fetchJson(file) {
+            const response = await fetch(file);
+            return await response.json();
+        }
 
-            fetch('links.json')
-                .then(response => response.json())
-                .then(data => {
-                    const resultsTable = document.getElementById('resultsTable');
-                    const links = data[frame] || [];
+        async function displayResults(passcode) {
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
 
-                    links.forEach(link => {
-                        const row = document.createElement('tr');
-                        const titleCell = document.createElement('td');
-                        titleCell.textContent = link.name;
-                        const linkCell = document.createElement('td');
-                        const anchor = document.createElement('a');
-                        anchor.href = link.url;
-                        anchor.textContent = link.url;
-                        linkCell.appendChild(anchor);
+            if (passcodes[passcode]) {
+                const assignedSubjects = passcodes[passcode].years;
+                let resultsHTML = '';
 
-                        row.appendChild(titleCell);
-                        row.appendChild(linkCell);
-                        resultsTable.appendChild(row);
+                for (const year in assignedSubjects) {
+                    resultsHTML += `<h3>Year ${year}</h3>`;
+                    resultsHTML += '<ul>';
+                    assignedSubjects[year].forEach(subject => {
+                        if (links[year] && links[year][subject]) {
+                            resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject}</a></li>`;
+                        }
                     });
-                })
-                .catch(error => {
-                    console.error('Error loading the JSON file:', error);
-                    alert("There was an error loading the links. Please try again later.");
-                });
-        });
+                    resultsHTML += '</ul>';
+                }
+
+                document.getElementById('results').innerHTML = resultsHTML;
+            } else {
+                document.getElementById('results').innerHTML = '<p>Invalid passcode.</p>';
+            }
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const passcode = urlParams.get('passcode');
+        if (passcode) {
+            displayResults(passcode);
+        } else {
+            document.getElementById('results').innerHTML = '<p>No passcode provided.</p>';
+        }
     </script>
 </body>
 </html>
