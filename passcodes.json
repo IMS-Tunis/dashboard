@@ -1,6 +1,52 @@
 {
-    "1234": "subject1",
-    "5678": "subject2",
-    "4321": "admin",
-    "8765": "hr"
+    "1234": {
+        "years": {
+            "3": ["EN", "MA", "SC"],
+            "4": ["EN"]
+        }
+    },
+    "5678": {
+        "years": {
+            "5": ["PH", "BI", "CH"],
+            "6": ["BU", "IC"]
+        }
+    },
+    "4321": {
+        "years": {
+            "7": ["EN", "MA"],
+            "8": ["PH", "SC"]
+        }
+    },
+    "8765": {
+        "years": {
+            "9": ["CH", "AR"],
+            "10": ["FR", "IS"]
+        }
+    },
+    "9876": {
+        "years": {
+            "11": ["EN", "GP"],
+            "12": ["TU", "PE"]
+        }
+    },
+    "5432": {
+        "years": {
+            "13": ["ART", "MU"]
+        }
+    },
+    "admin": {
+        "years": {
+            "3": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "4": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "5": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "6": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "7": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "8": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "9": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "10": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "11": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "12": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "13": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"]
+        }
+    }
 }
