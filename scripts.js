@@ -1,5 +1,5 @@
 function validatePasscode() {
-    const passcode = document.getElementById('passcode').value;
+    const passcode = document.getElementById('grade-passcode').value;
 
     fetch('passcodes.json')
         .then(response => response.json())
