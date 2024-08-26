@@ -22,36 +22,14 @@
             .then(linksData => {
                 let linksHTML = `<p>Welcome, ${user.name}</p><ul>`;
 
-                if (user.years) {
-                    user.years.forEach(year => {
-                        const attendanceLink = linksData.attendance_links[`year${year}`];
-                        if (attendanceLink) {
-                            linksHTML += `<li><a href="${attendanceLink}" target="_blank">Attendance for Year ${year}</a></li>`;
-                        }
-
-                        user.subjects.forEach(subject => {
-                            const gradeLink = linksData.grade_submission_links[`year${year}_${subject}`];
-                            if (gradeLink) {
-                                linksHTML += `<li><a href="${gradeLink}" target="_blank">Grade Submission for Year ${year} - ${subject}</a></li>`;
-                            }
-                        });
-
-                        const reportCardLink = linksData.report_cards_links[`year${year}`];
-                        if (reportCardLink) {
-                            linksHTML += `<li><a href="${reportCardLink}" target="_blank">Report Card for Year ${year}</a></li>`;
-                        }
-                    });
-                }
-
-                const pedagogicLink = linksData.pedagogic_links[user.name.toLowerCase().replace(" ", "")];
-                if (pedagogicLink) {
-                    linksHTML += `<li><a href="${pedagogicLink}" target="_blank">Pedagogic Resources</a></li>`;
-                }
-
-                if (user.admin) {
-                    Object.keys(linksData.pedagogic_links).forEach(key => {
-                        linksHTML += `<li><a href="${linksData.pedagogic_links[key]}" target="_blank">Pedagogic Resources for ${key}</a></li>`;
-                    });
+                // Assuming that links are categorized by passcode in links.json
+                const userLinks = linksData[user.passcode];
+                if (userLinks) {
+                    for (const [title, url] of Object.entries(userLinks)) {
+                        linksHTML += `<li><a href="${url}" target="_blank">${title}</a></li>`;
+                    }
+                } else {
+                    linksHTML += '<li>No links available.</li>';
                 }
 
                 linksHTML += '</ul>';
