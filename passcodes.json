@@ -1,64 +1,52 @@
 {
-    "1234": {
-        "name": "John Doe",
-        "email": "johndoe@example.com",
+    "teacher1_passcode": {
+        "name": "Teacher One",
+        "email": "teacher1@example.com",
         "years": {
-            "3": ["EN", "MA", "SC"],
-            "report_card": "year3"
-        }
+            "3": ["EN", "MA"],
+            "5": ["BI", "CH"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher1"
     },
-    "5678": {
-        "name": "Jane Smith",
-        "email": "janesmith@example.com",
+    "teacher2_passcode": {
+        "name": "Teacher Two",
+        "email": "teacher2@example.com",
         "years": {
-            "4": ["EN"],
-            "report_card": "year4"
-        }
+            "4": ["SC", "PH"],
+            "6A": ["EN", "MA"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher2"
     },
-    "8765": {
-        "name": "Emily Davis",
-        "email": "emilydavis@example.com",
+    "teacher3_passcode": {
+        "name": "Teacher Three",
+        "email": "teacher3@example.com",
         "years": {
-            "6A": ["EN", "MA"],
-            "6B": ["PH", "SC"],
-            "report_card": "year6A"
-        }
+            "6B": ["BI", "CH"],
+            "7": ["GP", "AR"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher3"
     },
-    "9876": {
-        "name": "Sarah Brown",
-        "email": "sarahbrown@example.com",
+    "teacher4_passcode": {
+        "name": "Teacher Four",
+        "email": "teacher4@example.com",
         "years": {
-            "11": ["EN", "GP"],
-            "12": ["TU", "PE"],
-            "report_card": "year11"
-        }
+            "8": ["EN", "MA"],
+            "9": ["TU", "FR"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher4"
     },
-    "5432": {
-        "name": "James Wilson",
-        "email": "jameswilson@example.com",
-        "years": {
-            "13": ["ART", "MU"],
-            "report_card": "year13"
-        }
-    },
-    "admin": {
-        "name": "Admin User",
+    "admin_passcode": {
+        "name": "Admin",
         "email": "admin@example.com",
+        "role": "admin",
         "years": {
-            "3": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "4": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "5": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "6A": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "6B": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "7": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "8": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "9": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "10": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "11": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "12": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "13": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "admin": ["school_database_link_admin"],
-            "report_card": "admin"
-        }
+            "admin": ["all"]
+        },
+        "pedagogic_resource": [
+            "https://example.com/pedagogic/teacher1",
+            "https://example.com/pedagogic/teacher2",
+            "https://example.com/pedagogic/teacher3",
+            "https://example.com/pedagogic/teacher4"
+        ]
     }
 }
