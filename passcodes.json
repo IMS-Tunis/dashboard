@@ -1,52 +1,42 @@
 {
-    "teacher1_passcode": {
-        "name": "Teacher One",
-        "email": "teacher1@example.com",
-        "years": {
-            "3": ["EN", "MA"],
-            "5": ["BI", "CH"]
-        },
-        "pedagogic_resource": "https://example.com/pedagogic/teacher1"
+  "teachers": [
+    {
+      "passcode": "1234",
+      "name": "Teacher One",
+      "email": "teacher1@example.com",
+      "years": ["3"],
+      "subjects": ["EN", "MA", "SC"],
+      "pedagogic_link": "https://example.com/pedagogic/teacher1"
     },
-    "teacher2_passcode": {
-        "name": "Teacher Two",
-        "email": "teacher2@example.com",
-        "years": {
-            "4": ["SC", "PH"],
-            "6A": ["EN", "MA"]
-        },
-        "pedagogic_resource": "https://example.com/pedagogic/teacher2"
+    {
+      "passcode": "5678",
+      "name": "Teacher Two",
+      "email": "teacher2@example.com",
+      "years": ["4", "5"],
+      "subjects": ["PH", "BI", "CH"],
+      "pedagogic_link": "https://example.com/pedagogic/teacher2"
     },
-    "teacher3_passcode": {
-        "name": "Teacher Three",
-        "email": "teacher3@example.com",
-        "years": {
-            "6B": ["BI", "CH"],
-            "7": ["GP", "AR"]
-        },
-        "pedagogic_resource": "https://example.com/pedagogic/teacher3"
+    {
+      "passcode": "9012",
+      "name": "Teacher Three",
+      "email": "teacher3@example.com",
+      "years": ["6A", "6B"],
+      "subjects": ["BU", "IC", "GP"],
+      "pedagogic_link": "https://example.com/pedagogic/teacher3"
     },
-    "teacher4_passcode": {
-        "name": "Teacher Four",
-        "email": "teacher4@example.com",
-        "years": {
-            "8": ["EN", "MA"],
-            "9": ["TU", "FR"]
-        },
-        "pedagogic_resource": "https://example.com/pedagogic/teacher4"
+    {
+      "passcode": "3456",
+      "name": "Teacher Four",
+      "email": "teacher4@example.com",
+      "years": ["7", "8"],
+      "subjects": ["AR", "TU", "FR"],
+      "pedagogic_link": "https://example.com/pedagogic/teacher4"
     },
-    "admin_passcode": {
-        "name": "Admin",
-        "email": "admin@example.com",
-        "role": "admin",
-        "years": {
-            "admin": ["all"]
-        },
-        "pedagogic_resource": [
-            "https://example.com/pedagogic/teacher1",
-            "https://example.com/pedagogic/teacher2",
-            "https://example.com/pedagogic/teacher3",
-            "https://example.com/pedagogic/teacher4"
-        ]
+    {
+      "passcode": "admin_passcode",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "admin": true
     }
+  ]
 }
