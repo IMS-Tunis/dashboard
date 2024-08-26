@@ -4,17 +4,15 @@
         "email": "johndoe@example.com",
         "years": {
             "3": ["EN", "MA", "SC"],
-            "4": ["EN"],
-            "pedagogic": "teacher1_workspace"
+            "report_card": "report_card_year3"
         }
     },
     "5678": {
         "name": "Jane Smith",
         "email": "janesmith@example.com",
         "years": {
-            "5": ["PH", "BI", "CH"],
-            "6": ["BU", "IC"],
-            "pedagogic": "teacher2_workspace"
+            "4": ["EN"],
+            "report_card": "report_card_year4"
         }
     },
     "4321": {
@@ -23,7 +21,33 @@
         "years": {
             "7": ["EN", "MA"],
             "8": ["PH", "SC"],
-            "admin": ["school_database_link_admin"]
+            "report_card": "report_card_year7"
+        }
+    },
+    "8765": {
+        "name": "Emily Davis",
+        "email": "emilydavis@example.com",
+        "years": {
+            "9": ["CH", "AR"],
+            "10": ["FR", "IS"],
+            "report_card": "report_card_year9"
+        }
+    },
+    "9876": {
+        "name": "Sarah Brown",
+        "email": "sarahbrown@example.com",
+        "years": {
+            "11": ["EN", "GP"],
+            "12": ["TU", "PE"],
+            "report_card": "report_card_year11"
+        }
+    },
+    "5432": {
+        "name": "James Wilson",
+        "email": "jameswilson@example.com",
+        "years": {
+            "13": ["ART", "MU"],
+            "report_card": "report_card_year13"
         }
     },
     "admin": {
@@ -33,7 +57,8 @@
             "3": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "4": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "5": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "6": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "6A": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "6B": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "7": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "8": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "9": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
@@ -42,7 +67,7 @@
             "12": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "13": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "admin": ["school_database_link_admin"],
-            "pedagogic": "pedagogic_resources_link_admin"
+            "report_card": "admin"
         }
     }
 }
