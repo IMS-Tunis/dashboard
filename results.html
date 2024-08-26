@@ -58,6 +58,17 @@
                     }
                 }
 
+                // Handle admin and other specific links
+                if (assignedSubjects.admin) {
+                    resultsHTML += `<h3>School Database</h3><ul><li><a href="${links.school_database_link_admin}" target="_blank">School Database Link</a></li></ul>`;
+                }
+
+                // Handle pedagogic resources
+                if (assignedSubjects.pedagogic) {
+                    const workspaceLink = links.pedagogic_resources_link;
+                    resultsHTML += `<h3>Pedagogic Resources</h3><ul><li><a href="${workspaceLink}" target="_blank">Workspace Link</a></li></ul>`;
+                }
+
                 document.getElementById('results').innerHTML = resultsHTML;
             } else {
                 document.getElementById('results').innerHTML = '<p>Invalid passcode.</p>';
