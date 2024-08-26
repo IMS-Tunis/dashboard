@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMST Dashboard 2024-2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="vectmaarif.png" alt="Maarif Logo" class="header-logo left-logo">
+        <h1 class="header-title">IMST Dashboard 2024-2025</h1>
+        <img src="vectcambridge.png" alt="Cambridge Logo" class="header-logo right-logo">
+    </header>
+
+    <div class="frame" id="frame1">
+        <h2>Attendance</h2>
+        <p>Teachers can fill in attendance at the end of the first session, and nurses can record the reason for absence.</p>
+        <button onclick="window.open('https://example.com/attendance', '_blank')">Access Attendance</button>
+    </div>
+
+    <div class="frame" id="frame2">
+        <h2>Weekly Reports</h2>
+        <button onclick="window.open('https://example.com/weekly-reports-LAC', '_blank')">LAC Weekly Reports</button>
+        <button onclick="window.open('https://example.com/weekly-reports-Charguia', '_blank')">Charguia Weekly Reports</button>
+    </div>
+
+    <div class="frame" id="frame3">
+        <h2>Grade Submission</h2>
+        <p>Each teacher has a passcode to access and submit grades for their subjects.</p>
+        <input type="text" id="gradePasscode" placeholder="Enter your passcode">
+        <button onclick="submitPasscode('gradeSubmission')">Access Grade Submission</button>
+    </div>
+
+    <div class="frame" id="frame4">
+        <h2>Report Cards</h2>
+        <p>Homeroom teachers can access the report cards for a check before printing.</p>
+        <input type="text" id="reportCardPasscode" placeholder="Enter your passcode">
+        <button onclick="submitPasscode('reportCards')">Access Report Cards</button>
+    </div>
+
+    <div class="frame" id="frame5">
+        <h2>Students Lists</h2>
+        <p>Teachers can access the list of students.</p>
+        <button onclick="window.open('https://example.com/student-lists', '_blank')">Access Student Lists</button>
+    </div>
+
+    <div class="frame" id="frame6">
+        <h2>School Database</h2>
+        <p>Admin officers can access our school database.</p>
+        <input type="text" id="databasePasscode" placeholder="Enter your passcode">
+        <button onclick="submitPasscode('schoolDatabase')">Access Database</button>
+    </div>
+
+    <div class="frame" id="frame7">
+        <h2>Pedagogic Resources</h2>
+        <p>Teachers can access their personal workspace and submit their pedagogic resources.</p>
+        <input type="text" id="pedagogicPasscode" placeholder="Enter your passcode">
+        <button onclick="submitPasscode('pedagogicResources')">Access My Workspace</button>
+    </div>
+
+    <footer>
+        <p>Admin staff have a supercode to access everything.</p>
+    </footer>
+
+    <script>
+        function submitPasscode(section) {
+            const passcode = document.getElementById(section + 'Passcode').value;
+            window.location.href = `results.html?section=${section}&passcode=${passcode}`;
+        }
+    </script>
+</body>
+</html>
