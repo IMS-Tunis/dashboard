@@ -93,85 +93,114 @@
     </footer>
 
     <script>
-        async function fetchJson(file) {
-            const response = await fetch(file);
-            return await response.json();
-        }
+     async function fetchJson(file) {
+    const response = await fetch(file);
+    return await response.json();
+}
 
-        async function accessAttendance() {
-            const year = document.getElementById('yearSelect').value;
-            const links = await fetchJson('links.json');
-            const url = links[`attendance_sheet_${year}`];
-            if (url) {
-                window.open(url, '_blank'); // Opens in a new tab
-            } else {
-                alert('No attendance sheet found for the selected year.');
-            }
+async function accessAttendance() {
+    try {
+        const year = document.getElementById('yearSelect').value;
+        const links = await fetchJson('links.json');
+        const url = links[`attendance_sheet_${year}`];
+        if (url) {
+            window.open(url, '_blank'); // Opens in a new tab
+        } else {
+            alert('No attendance sheet found for the selected year.');
         }
+    } catch (error) {
+        console.error('Error accessing attendance:', error);
+    }
+}
 
-        async function accessWeeklyReports(location) {
-            const links = await fetchJson('links.json');
-            const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
-            if (url) {
-                window.open(url, '_blank'); // Opens in a new tab
-            } else {
-                alert(`No weekly report found for ${location}.`);
-            }
+async function accessWeeklyReports(location) {
+    try {
+        const links = await fetchJson('links.json');
+        const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
+        if (url) {
+            window.open(url, '_blank'); // Opens in a new tab
+        } else {
+            alert(`No weekly report found for ${location}.`);
         }
+    } catch (error) {
+        console.error('Error accessing weekly reports:', error);
+    }
+}
 
-        function redirectToResults() {
-            const passcode = document.getElementById('passcode').value;
+async function accessStudentLists() {
+    try {
+        const links = await fetchJson('links.json');
+        const url = links.student_lists_link;
+        if (url) {
+            window.open(url, '_blank'); // Opens in a new tab
+        } else {
+            alert('No student list found.');
+        }
+    } catch (error) {
+        console.error('Error accessing student lists:', error);
+    }
+}
+
+async function accessSchoolDatabase() {
+    try {
+        const passcode = document.getElementById('databasePasscode').value;
+        const passcodes = await fetchJson('passcodes.json');
+        const links = await fetchJson('links.json');
+
+        if (passcodes[passcode] && passcode === 'admin') {
+            window.open(links.school_database_link_admin, '_blank'); // Opens admin link in a new tab
+        } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years.admin) {
+            window.open(links.school_database_link_admin, '_blank'); // Opens in a new tab for specific passcode
+        } else {
+            window.location.href = `results.html?error=invalid_passcode`;
+        }
+    } catch (error) {
+        console.error('Error accessing school database:', error);
+    }
+}
+
+async function accessPedagogicResources() {
+    try {
+        const passcode = document.getElementById('resourcesPasscode').value;
+        const passcodes = await fetchJson('passcodes.json');
+        const links = await fetchJson('links.json');
+
+        if (passcodes[passcode] && passcode === 'admin') {
+            window.open(links.pedagogic_resources_link_admin, '_blank'); // Opens admin link in a new tab
+        } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years.pedagogic) {
+            const workspaceLink = passcodes[passcode].years.pedagogic;
+            window.open(workspaceLink, '_blank'); // Opens specific workspace link
+        } else {
+            window.location.href = `results.html?error=invalid_passcode`;
+        }
+    } catch (error) {
+        console.error('Error accessing pedagogic resources:', error);
+    }
+}
+
+function redirectToResults() {
+    try {
+        const passcode = document.getElementById('passcode').value;
+        window.location.href = `results.html?passcode=${passcode}`;
+    } catch (error) {
+        console.error('Error redirecting to results:', error);
+    }
+}
+
+async function accessReportCards() {
+    try {
+        const passcode = document.getElementById('reportPasscode').value;
+        const passcodes = await fetchJson('passcodes.json');
+        if (passcodes[passcode]) {
             window.location.href = `results.html?passcode=${passcode}`;
+        } else {
+            window.location.href = `results.html?error=invalid_passcode`;
         }
+    } catch (error) {
+        console.error('Error accessing report cards:', error);
+    }
+}
 
-        async function accessReportCards() {
-            const passcode = document.getElementById('reportPasscode').value;
-            const passcodes = await fetchJson('passcodes.json');
-            if (passcodes[passcode]) {
-                window.location.href = `results.html?passcode=${passcode}`;
-            } else {
-                window.location.href = `results.html?error=invalid_passcode`;
-            }
-        }
-
-        async function accessStudentLists() {
-            const links = await fetchJson('links.json');
-            const url = links.student_lists_link;
-            if (url) {
-                window.open(url, '_blank'); // Opens in a new tab
-            } else {
-                alert('No student list found.');
-            }
-        }
-
-        async function accessSchoolDatabase() {
-            const passcode = document.getElementById('databasePasscode').value;
-            const passcodes = await fetchJson('passcodes.json');
-            const links = await fetchJson('links.json');
-
-            if (passcodes[passcode] && passcode === 'admin') {
-                window.open(links.school_database_link_admin, '_blank'); // Opens admin link in a new tab
-            } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years["admin"]) {
-                window.open(links.school_database_link_admin, '_blank'); // Opens in a new tab for specific passcode
-            } else {
-                window.location.href = `results.html?error=invalid_passcode`;
-            }
-        }
-
-        async function accessPedagogicResources() {
-            const passcode = document.getElementById('resourcesPasscode').value;
-            const passcodes = await fetchJson('passcodes.json');
-            const links = await fetchJson('links.json');
-
-            if (passcodes[passcode] && passcode === 'admin') {
-                window.open(links.pedagogic_resources_link_admin, '_blank'); // Opens admin link in a new tab
-            } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years["pedagogic"]) {
-                const workspaceLink = passcodes[passcode].years["pedagogic"];
-                window.open(workspaceLink, '_blank'); // Opens specific workspace link
-            } else {
-                window.location.href = `results.html?error=invalid_passcode`;
-            }
-        }
     </script>
 </body>
 </html>
