@@ -17,7 +17,7 @@
         <!-- Frame 1 - Attendance -->
         <div class="frame">
             <h2>Attendance</h2>
-            <p class="note">Teachers must fill in attendance at the end of the first session. Nurses must record the reason for absence.</p>
+            <p class="note">Teachers' duty is to fill in attendance at the end of the first session, and nurses' duty is to record the reason for absence.</p>
             <select id="yearSelect">
                 <option value="year0">Year 0</option>
                 <option value="year1">Year 1</option>
@@ -41,7 +41,7 @@
         <div class="frame">
             <h2>Weekly Reports</h2>
             <p class="note">Weekly reports will be automatically sent every Thursday at 17:00.</p>
-            <button onclick="accessWeeklyReports()" id="weeklyReportBtn">Go to Reports</button>
+            <button onclick="accessWeeklyReports()">Go to Reports</button>
         </div>
 
         <!-- Frame 3 - Grade Submission -->
@@ -66,7 +66,7 @@
         <div class="frame">
             <h2>Students Lists</h2>
             <p class="note">Teachers can access the list of students.</p>
-            <button onclick="accessStudentLists()" id="studentListBtn">Access Students Lists</button>
+            <button onclick="accessStudentLists()">Access Students Lists</button>
         </div>
 
         <!-- Frame 6 - School Database -->
@@ -75,6 +75,14 @@
             <p class="note">Admin officers can access our school database.</p>
             <input type="text" id="databasePasscode" placeholder="Enter Passcode">
             <button onclick="accessSchoolDatabase()">Access Database</button>
+        </div>
+
+        <!-- Frame 7 - Pedagogic Resources -->
+        <div class="frame">
+            <h2>Pedagogic Resources</h2>
+            <p class="note">Teachers can access their personal workspace and submit their pedagogic resources.</p>
+            <input type="text" id="resourcesPasscode" placeholder="Enter Passcode">
+            <button onclick="accessPedagogicResources()">Access My Workspace</button>
         </div>
     </div>
 
@@ -92,7 +100,7 @@
             const year = document.getElementById('yearSelect').value;
             const links = await fetchJson('links.json');
             const url = links[`attendance_sheet_${year}`];
-            window.location.href = url;
+            window.open(url, '_blank'); // Opens in a new tab
         }
 
         async function accessWeeklyReports() {
@@ -125,8 +133,27 @@
         async function accessSchoolDatabase() {
             const passcode = document.getElementById('databasePasscode').value;
             const passcodes = await fetchJson('passcodes.json');
-            if (passcodes[passcode]) {
-                window.location.href = `results.html?passcode=${passcode}`;
+            const links = await fetchJson('links.json');
+
+            if (passcodes[passcode] && passcode === 'admin') {
+                window.open(links.school_database_link_admin, '_blank'); // Opens admin link in a new tab
+            } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years["admin"]) {
+                window.open(links.school_database_link_admin, '_blank'); // Opens in a new tab for specific passcode
+            } else {
+                window.location.href = `results.html?error=invalid_passcode`;
+            }
+        }
+
+        async function accessPedagogicResources() {
+            const passcode = document.getElementById('resourcesPasscode').value;
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
+
+            if (passcodes[passcode] && passcode === 'admin') {
+                window.open(links.pedagogic_resources_link_admin, '_blank'); // Opens admin link in a new tab
+            } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years["pedagogic"]) {
+                const workspaceLink = passcodes[passcode].years["pedagogic"];
+                window.open(workspaceLink, '_blank'); // Opens specific workspace link
             } else {
                 window.location.href = `results.html?error=invalid_passcode`;
             }
