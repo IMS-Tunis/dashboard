@@ -64,13 +64,11 @@
         let resultsHTML = '<h3>Grade Submission</h3><ul>';
 
         for (const year in assignedSubjects) {
-            if (year !== 'admin') {
-                assignedSubjects[year].forEach(subject => {
-                    if (links[year] && links[year][subject]) {
-                        resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject} (Year ${year})</a></li>`;
-                    }
-                });
-            }
+            assignedSubjects[year].forEach(subject => {
+                if (links[year] && links[year][subject]) {
+                    resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject} (Year ${year})</a></li>`;
+                }
+            });
         }
 
         resultsHTML += '</ul>';
@@ -98,16 +96,18 @@
 
     function displayPedagogicResources(passcodes, links, passcode) {
         let resultsHTML = '<h3>Pedagogic Resources</h3><ul>';
-        const resourceLinks = passcodes[passcode].pedagogic_resource;
+        const resourceLinks = links.pedagogic_resources[passcode] || links.pedagogic_resources.admin;
 
         if (Array.isArray(resourceLinks)) {
             // Admin: Display all resources
             resourceLinks.forEach(link => {
                 resultsHTML += `<li><a href="${link}" target="_blank">Workspace</a></li>`;
             });
-        } else {
+        } else if (resourceLinks) {
             // Teacher: Display only their resource
             resultsHTML += `<li><a href="${resourceLinks}" target="_blank">Workspace</a></li>`;
+        } else {
+            resultsHTML = '<p>No workspace found for this passcode.</p>';
         }
 
         resultsHTML += '</ul>';
