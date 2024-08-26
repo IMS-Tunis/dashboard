@@ -14,11 +14,15 @@
     "attendance_sheet_year11": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXaWughW5DhMiVQoMVxXQV0B3RCE1qcRpMRTOYn3kntX8Q?e=2xN7Em",
     "attendance_sheet_year12": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EY8FXWuIS7xAn1nr3iARlw8BHl_9H2PTcKbMi_cdfM5R-A?e=xE7xI4",
     "attendance_sheet_year13": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXEM4eAyqexKg1Ld6Xo-0YYBE8YQVItMenZ9Xb-Fl-DnNA?e=xMBM4S",
+
     "weekly_reports_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EbZ2mtH7ZVtOjtf4-Pug8gMBY_AXYOx424kwN_YhzHJoTQ?e=buIXip",
     "charguia_weekly_reports_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EegsqjrYJz1FksYT-fel6v0BbtIu5BzM_g1hejheC4GHtw?e=svf1Hm",
+
     "student_lists_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUuugrXLwG5Nmjny5kOuSooBr7gw4jcKx56fTcy47QzIzg?e=c6N2gw",
+
     "school_database_link_admin": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETctFyqP7YJIvJi84sjrFGcBFU7D0yLzCiPLv7mSzrY-eA?e=shN7jW",
     "school_database_link_hr": "http://example.com/school-database/hr",
+
     "3": {
         "EN": "http://link3EN",
         "MA": "http://link3MA",
@@ -235,6 +239,7 @@
         "ART": "http://link13ART",
         "MU": "http://link13MU"
     },
+
     "report_card_year3": "http://reportcard_link_year3",
     "report_card_year4": "http://reportcard_link_year4",
     "report_card_year5": "http://reportcard_link_year5",
@@ -246,5 +251,18 @@
     "report_card_year10": "http://reportcard_link_year10",
     "report_card_year11": "http://reportcard_link_year11",
     "report_card_year12": "http://reportcard_link_year12",
-    "report_card_year13": "http://reportcard_link_year13"
+    "report_card_year13": "http://reportcard_link_year13",
+
+    "pedagogic_resources": {
+        "teacher1": "https://example.com/pedagogic/teacher1",
+        "teacher2": "https://example.com/pedagogic/teacher2",
+        "teacher3": "https://example.com/pedagogic/teacher3",
+        "teacher4": "https://example.com/pedagogic/teacher4",
+        "admin": [
+            "https://example.com/pedagogic/teacher1",
+            "https://example.com/pedagogic/teacher2",
+            "https://example.com/pedagogic/teacher3",
+            "https://example.com/pedagogic/teacher4"
+        ]
+    }
 }
