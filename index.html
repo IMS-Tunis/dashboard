@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teacher Links Platform</title>
+    <title>IMST Dashboard 2024-2025</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
         <!-- Frame 1 - Attendance -->
         <div class="frame">
             <h2>Attendance</h2>
-            <p class="note">Teachers' duty is to fill in attendance at the end of the first session, and nurses' duty is to record the reason for absence.</p>
+            <p class="note">Teachers can fill in attendance at the end of the first session, and nurses can record the reason for absence.</p>
             <select id="yearSelect">
                 <option value="year0">Year 0</option>
                 <option value="year1">Year 1</option>
@@ -50,8 +50,8 @@
         <div class="frame">
             <h2>Grade Submission</h2>
             <p class="note">Each teacher has a passcode to access and submit grades for their subjects.</p>
-            <form onsubmit="redirectToResults(); return false;">
-                <input type="text" id="passcode" placeholder="Enter Passcode" required>
+            <form onsubmit="redirectToResults('gradeSubmission'); return false;">
+                <input type="text" id="passcodeGrade" placeholder="Enter Passcode" required>
                 <button type="submit">Access Sheets</button>
             </form>
         </div>
@@ -60,8 +60,10 @@
         <div class="frame">
             <h2>Report Cards</h2>
             <p class="note">Homeroom teachers can access the report cards for a check before printing.</p>
-            <input type="text" id="reportPasscode" placeholder="Enter Passcode">
-            <button onclick="accessReportCards()">Access Report Cards</button>
+            <form onsubmit="redirectToResults('reportCards'); return false;">
+                <input type="text" id="passcodeReport" placeholder="Enter Passcode" required>
+                <button type="submit">Access Report Cards</button>
+            </form>
         </div>
 
         <!-- Frame 5 - Students Lists -->
@@ -75,16 +77,20 @@
         <div class="frame">
             <h2>School Database</h2>
             <p class="note">Admin officers can access our school database.</p>
-            <input type="text" id="databasePasscode" placeholder="Enter Passcode">
-            <button onclick="accessSchoolDatabase()">Access Database</button>
+            <form onsubmit="redirectToResults('schoolDatabase'); return false;">
+                <input type="text" id="passcodeDatabase" placeholder="Enter Passcode" required>
+                <button type="submit">Access Database</button>
+            </form>
         </div>
 
         <!-- Frame 7 - Pedagogic Resources -->
         <div class="frame">
             <h2>Pedagogic Resources</h2>
             <p class="note">Teachers can access their personal workspace and submit their pedagogic resources.</p>
-            <input type="text" id="resourcesPasscode" placeholder="Enter Passcode">
-            <button onclick="accessPedagogicResources()">Access My Workspace</button>
+            <form onsubmit="redirectToResults('pedagogicResources'); return false;">
+                <input type="text" id="passcodePedagogic" placeholder="Enter Passcode" required>
+                <button type="submit">Access My Workspace</button>
+            </form>
         </div>
     </div>
 
@@ -93,114 +99,46 @@
     </footer>
 
     <script>
-     async function fetchJson(file) {
-    const response = await fetch(file);
-    return await response.json();
-}
-
-async function accessAttendance() {
-    try {
-        const year = document.getElementById('yearSelect').value;
-        const links = await fetchJson('links.json');
-        const url = links[`attendance_sheet_${year}`];
-        if (url) {
-            window.open(url, '_blank'); // Opens in a new tab
-        } else {
-            alert('No attendance sheet found for the selected year.');
+        async function fetchJson(file) {
+            const response = await fetch(file);
+            return await response.json();
         }
-    } catch (error) {
-        console.error('Error accessing attendance:', error);
-    }
-}
 
-async function accessWeeklyReports(location) {
-    try {
-        const links = await fetchJson('links.json');
-        const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
-        if (url) {
-            window.open(url, '_blank'); // Opens in a new tab
-        } else {
-            alert(`No weekly report found for ${location}.`);
+        async function accessAttendance() {
+            const year = document.getElementById('yearSelect').value;
+            const links = await fetchJson('links.json');
+            const url = links[`attendance_sheet_${year}`];
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert('No attendance sheet found for the selected year.');
+            }
         }
-    } catch (error) {
-        console.error('Error accessing weekly reports:', error);
-    }
-}
 
-async function accessStudentLists() {
-    try {
-        const links = await fetchJson('links.json');
-        const url = links.student_lists_link;
-        if (url) {
-            window.open(url, '_blank'); // Opens in a new tab
-        } else {
-            alert('No student list found.');
+        async function accessWeeklyReports(location) {
+            const links = await fetchJson('links.json');
+            const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert(`No weekly report found for ${location}.`);
+            }
         }
-    } catch (error) {
-        console.error('Error accessing student lists:', error);
-    }
-}
 
-async function accessSchoolDatabase() {
-    try {
-        const passcode = document.getElementById('databasePasscode').value;
-        const passcodes = await fetchJson('passcodes.json');
-        const links = await fetchJson('links.json');
-
-        if (passcodes[passcode] && passcode === 'admin') {
-            window.open(links.school_database_link_admin, '_blank'); // Opens admin link in a new tab
-        } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years.admin) {
-            window.open(links.school_database_link_admin, '_blank'); // Opens in a new tab for specific passcode
-        } else {
-            window.location.href = `results.html?error=invalid_passcode`;
+        async function accessStudentLists() {
+            const links = await fetchJson('links.json');
+            const url = links.student_lists_link;
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert('No student list found.');
+            }
         }
-    } catch (error) {
-        console.error('Error accessing school database:', error);
-    }
-}
 
-async function accessPedagogicResources() {
-    try {
-        const passcode = document.getElementById('resourcesPasscode').value;
-        const passcodes = await fetchJson('passcodes.json');
-        const links = await fetchJson('links.json');
-
-        if (passcodes[passcode] && passcode === 'admin') {
-            window.open(links.pedagogic_resources_link_admin, '_blank'); // Opens admin link in a new tab
-        } else if (passcodes[passcode] && passcodes[passcode].years && passcodes[passcode].years.pedagogic) {
-            const workspaceLink = passcodes[passcode].years.pedagogic;
-            window.open(workspaceLink, '_blank'); // Opens specific workspace link
-        } else {
-            window.location.href = `results.html?error=invalid_passcode`;
+        function redirectToResults(section) {
+            const passcode = document.getElementById(`passcode${section.charAt(0).toUpperCase() + section.slice(1)}`).value;
+            window.location.href = `results.html?section=${section}&passcode=${passcode}`;
         }
-    } catch (error) {
-        console.error('Error accessing pedagogic resources:', error);
-    }
-}
-
-function redirectToResults() {
-    try {
-        const passcode = document.getElementById('passcode').value;
-        window.location.href = `results.html?passcode=${passcode}`;
-    } catch (error) {
-        console.error('Error redirecting to results:', error);
-    }
-}
-
-async function accessReportCards() {
-    try {
-        const passcode = document.getElementById('reportPasscode').value;
-        const passcodes = await fetchJson('passcodes.json');
-        if (passcodes[passcode]) {
-            window.location.href = `results.html?passcode=${passcode}`;
-        } else {
-            window.location.href = `results.html?error=invalid_passcode`;
-        }
-    } catch (error) {
-        console.error('Error accessing report cards:', error);
-    }
-}
-
     </script>
 </body>
 </html>
