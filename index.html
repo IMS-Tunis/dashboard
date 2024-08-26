@@ -3,92 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMST Dashboard 2024-2025</title>
+    <title>IMST Dashboard - Test</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center;">
-        <img src="vectmaarif.png" alt="School Logo" style="height: 100px; margin-left: 20px;">
-        <h1 style="text-align: center;">IMST Dashboard 2024-2025</h1>
-        <img src="vectcambridge.png" alt="Cambridge Logo" style="height: 100px; margin-right: 20px;">
-    </header>
-
-    <main>
-        <!-- Frame 1: Attendance -->
-        <div class="frame">
-            <h2>Attendance</h2>
-            <p>Teachers' duty is to fill in attendance at the end of the first session. Nurses' duty is to record the reason for absence.</p>
-            <select id="attendance-year">
-                <option value="year0">Year 0</option>
-                <option value="year1">Year 1</option>
-                <option value="year2">Year 2</option>
-                <option value="year3">Year 3</option>
-                <option value="year4">Year 4</option>
-                <option value="year5">Year 5</option>
-                <option value="year6A">Year 6A</option>
-                <option value="year6B">Year 6B</option>
-                <option value="year7">Year 7</option>
-                <option value="year8">Year 8</option>
-                <option value="year9">Year 9</option>
-                <option value="year10">Year 10</option>
-                <option value="year11">Year 11</option>
-                <option value="year12">Year 12</option>
-                <option value="year13">Year 13</option>
-            </select>
-            <button onclick="accessAttendance()">Access Attendance</button>
-        </div>
-
-        <!-- Frame 2: Weekly Reports -->
-        <div class="frame">
-            <h2>Weekly Reports</h2>
-            <p>Weekly reports will be automatically sent every Thursday at 17:00.</p>
-            <button onclick="accessWeeklyReports('lac')">LAC Weekly Reports</button>
-            <button onclick="accessWeeklyReports('charguia')">Charguia Weekly Reports</button>
-        </div>
-
-        <!-- Frame 3: Grade Submission -->
-        <div class="frame">
-            <h2>Grade Submission</h2>
-            <p>Each teacher has a passcode to access and submit grades for their subjects.</p>
-            <input type="text" id="grade-passcode" placeholder="Enter your passcode">
-            <button onclick="submitGrades()">Access Grade Sheets</button>
-        </div>
-
-        <!-- Frame 4: Report Cards -->
-        <div class="frame">
-            <h2>Report Cards</h2>
-            <p>Homeroom teachers can access the report cards for their class.</p>
-            <input type="text" id="report-passcode" placeholder="Enter your passcode">
-            <button onclick="accessReportCards()">Access Report Cards</button>
-        </div>
-
-        <!-- Frame 5: Student Lists -->
-        <div class="frame">
-            <h2>Student Lists</h2>
-            <p>Teachers can access the list of students.</p>
-            <button onclick="accessStudentLists()">Access Student List</button>
-        </div>
-
-        <!-- Frame 6: School Database -->
-        <div class="frame">
-            <h2>School Database</h2>
-            <p>Admin officers can access our school database.</p>
-            <input type="text" id="database-passcode" placeholder="Enter your passcode">
-            <button onclick="accessDatabase()">Access Database</button>
-        </div>
-
-        <!-- Frame 7: Pedagogic Resources -->
-        <div class="frame">
-            <h2>Pedagogic Resources</h2>
-            <p>Teachers can access their personal workspace and submit their pedagogic resources.</p>
-            <input type="text" id="pedagogic-passcode" placeholder="Enter your passcode">
-            <button onclick="accessPedagogic()">Access My Workspace</button>
-        </div>
-    </main>
-
-    <footer>
-        <p>Admin staff have a supercode to access everything.</p>
-    </footer>
+    <h1>IMST Dashboard - Test</h1>
+    <div class="frame">
+        <h2>Access Links</h2>
+        <input type="text" id="passcode" placeholder="Enter your passcode">
+        <button onclick="validatePasscode()">Submit</button>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
