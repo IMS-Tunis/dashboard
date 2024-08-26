@@ -18,77 +18,65 @@
     </div>
 
     <script>
-        async function fetchJson(file) {
-            const response = await fetch(file);
-            return await response.json();
-        }
-
-        async function displayResults(passcode) {
-            try {
-                const passcodes = await fetchJson('passcodes.json');
-                const links = await fetchJson('links.json');
-                const urlParams = new URLSearchParams(window.location.search);
-                const error = urlParams.get('error');
-
-                if (error === 'invalid_passcode') {
-                    document.getElementById('results').innerHTML = '<p>Invalid passcode. Please try again.</p>';
-                    return;
-                }
-
-                if (passcodes[passcode]) {
-                    const assignedSubjects = passcodes[passcode].years;
-                    let resultsHTML = '';
-
-                    // Handle report cards for homeroom teachers
-                    if (assignedSubjects.report_card) {
-                        const reportCardLink = links[`report_card_${assignedSubjects.report_card}`];
-                        if (reportCardLink) {
-                            resultsHTML += `<h3>Report Card</h3><ul><li><a href="${reportCardLink}" target="_blank">Report Card Link</a></li></ul>`;
-                        }
-                    }
-
-                    // Handle subject-specific links for grade submission
-                    for (const year in assignedSubjects) {
-                        if (year !== "report_card" && year !== "admin") {
-                            resultsHTML += `<h3>Year ${year}</h3>`;
-                            resultsHTML += '<ul>';
-                            assignedSubjects[year].forEach(subject => {
-                                if (links[year] && links[year][subject]) {
-                                    resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject}</a></li>`;
-                                }
-                            });
-                            resultsHTML += '</ul>';
-                        }
-                    }
-
-                    // Handle admin and other specific links
-                    if (assignedSubjects.admin) {
-                        resultsHTML += `<h3>School Database</h3><ul><li><a href="${links.school_database_link_admin}" target="_blank">School Database Link</a></li></ul>`;
-                    }
-
-                    // Handle pedagogic resources
-                    if (assignedSubjects.pedagogic) {
-                        const workspaceLink = links.pedagogic_resources_link;
-                        resultsHTML += `<h3>Pedagogic Resources</h3><ul><li><a href="${workspaceLink}" target="_blank">Workspace Link</a></li></ul>`;
-                    }
-
-                    document.getElementById('results').innerHTML = resultsHTML;
-                } else {
-                    document.getElementById('results').innerHTML = '<p>Invalid passcode.</p>';
-                }
-            } catch (error) {
-                console.error('Error displaying results:', error);
-                document.getElementById('results').innerHTML = '<p>Error loading results. Please try again later.</p>';
-            }
-        }
-
+     async function displayResults(passcode) {
+    try {
+        const passcodes = await fetchJson('passcodes.json');
+        const links = await fetchJson('links.json');
         const urlParams = new URLSearchParams(window.location.search);
-        const passcode = urlParams.get('passcode');
-        if (passcode) {
-            displayResults(passcode);
-        } else {
-            document.getElementById('results').innerHTML = '<p>No passcode provided.</p>';
+        const error = urlParams.get('error');
+
+        if (error === 'invalid_passcode') {
+            document.getElementById('results').innerHTML = '<p>Invalid passcode. Please try again.</p>';
+            return;
         }
+
+        if (passcodes[passcode]) {
+            const assignedSubjects = passcodes[passcode].years;
+            let resultsHTML = '';
+
+            // Handle report cards for homeroom teachers
+            if (assignedSubjects.report_card) {
+                const reportCardLink = links[`report_card_${assignedSubjects.report_card}`];
+                if (reportCardLink) {
+                    resultsHTML += `<h3>Report Card</h3><ul><li><a href="${reportCardLink}" target="_blank">Report Card Link</a></li></ul>`;
+                }
+            }
+
+            // Handle subject-specific links for grade submission
+            for (const year in assignedSubjects) {
+                if (year !== "report_card" && year !== "admin") {
+                    resultsHTML += `<h3>Year ${year}</h3>`;
+                    resultsHTML += '<ul>';
+                    assignedSubjects[year].forEach(subject => {
+                        if (links[year] && links[year][subject]) {
+                            resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject}</a></li>`;
+                        }
+                    });
+                    resultsHTML += '</ul>';
+                }
+            }
+
+            // Handle admin and other specific links
+            if (assignedSubjects.admin) {
+                resultsHTML += `<h3>School Database</h3><ul><li><a href="${links.school_database_link_admin}" target="_blank">School Database Link</a></li></ul>`;
+            }
+
+            // Handle pedagogic resources
+            if (assignedSubjects.pedagogic) {
+                const workspaceLink = links.pedagogic_resources_link;
+                resultsHTML += `<h3>Pedagogic Resources</h3><ul><li><a href="${workspaceLink}" target="_blank">Workspace Link</a></li></ul>`;
+            }
+
+            document.getElementById('results').innerHTML = resultsHTML;
+        } else {
+            document.getElementById('results').innerHTML = '<p>Invalid passcode.</p>';
+        }
+    } catch (error) {
+        console.error('Error displaying results:', error);
+        document.getElementById('results').innerHTML = '<p>Error loading results. Please try again later.</p>';
+    }
+}
+
     </script>
 </body>
 </html>
