@@ -5,8 +5,8 @@
     "attendance_sheet_year3": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EWaa9fUD4B9MptBlA8hcBwIBCDgLXOKV0NvBS32Yt-6ycA?e=GDure3",
     "attendance_sheet_year4": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EeQ1ILv4aYNMvhHFM_Is-wwB6ePXHcquHxcXM6bO_nvEvg?e=NUyYPo",
     "attendance_sheet_year5": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EdBZbirMkOZEuKBBZVedKssBEzM8nssN9Misp10LGGtPbg?e=B3wKUm",
-    "attendance_sheet_year6A": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EWwqCo2lhEVEoTAr3SR6xlEB0A0kbSHnPmUOOKq166dtBA?e=WgDXOr",
-    "attendance_sheet_year6B": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETBdr437_aBEm9Rk4gM0ITwBu50FV5o-NAkEVr-2sTdGqw?e=E7TqbJ",
+    "attendance_sheet_year6A": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EWwqCo2lhEVEoTAr3SR6xlEB0A0kbSHnPmUOOKq166dtBA?e=sGNRkK",
+    "attendance_sheet_year6B": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EdfDh4v3dBFHsDL0FEgjViQBb8haRrNUec5J_Gx8Sn6d7Q?e=3HUbe3",
     "attendance_sheet_year7": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETBdr437_aBEm9Rk4gM0ITwBu50FV5o-NAkEVr-2sTdGqw?e=E7TqbJ",
     "attendance_sheet_year8": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ER9pUjxAhQpCvDjnS-MAlTwBvb4d7zLB_0Bg47n8j40SkQ?e=zxSEV1",
     "attendance_sheet_year9": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETRCb88xtEZDuA_S7HRMZDwB-g8fEOO2EdRkCn4wjQDgpA?e=L8VwFl",
@@ -14,14 +14,16 @@
     "attendance_sheet_year11": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXaWughW5DhMiVQoMVxXQV0B3RCE1qcRpMRTOYn3kntX8Q?e=2xN7Em",
     "attendance_sheet_year12": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EY8FXWuIS7xAn1nr3iARlw8BHl_9H2PTcKbMi_cdfM5R-A?e=xE7xI4",
     "attendance_sheet_year13": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXEM4eAyqexKg1Ld6Xo-0YYBE8YQVItMenZ9Xb-Fl-DnNA?e=xMBM4S",
-    
+
     "weekly_reports_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EbZ2mtH7ZVtOjtf4-Pug8gMBY_AXYOx424kwN_YhzHJoTQ?e=buIXip",
+    "charguia_weekly_reports_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EegsqjrYJz1FksYT-fel6v0BbtIu5BzM_g1hejheC4GHtw?e=svf1Hm",
 
     "student_lists_link": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUuugrXLwG5Nmjny5kOuSooBr7gw4jcKx56fTcy47QzIzg?e=c6N2gw",
 
     "school_database_link_admin": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETctFyqP7YJIvJi84sjrFGcBFU7D0yLzCiPLv7mSzrY-eA?e=shN7jW",
-    "school_database_link_hr": "http://example.com/school-database/hr",
-
+    "school_database_link_hr": "http://example.com/school-database/hr"
+}
+{
     "3": {
         "EN": "http://link3EN",
         "MA": "http://link3MA",
@@ -238,6 +240,7 @@
         "ART": "http://link13ART",
         "MU": "http://link13MU"
     },
+
     "report_card_year3": "http://reportcard_link_year3",
     "report_card_year4": "http://reportcard_link_year4",
     "report_card_year5": "http://reportcard_link_year5",
