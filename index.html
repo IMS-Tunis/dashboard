@@ -102,13 +102,21 @@
             const year = document.getElementById('yearSelect').value;
             const links = await fetchJson('links.json');
             const url = links[`attendance_sheet_${year}`];
-            window.open(url, '_blank'); // Opens in a new tab
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert('No attendance sheet found for the selected year.');
+            }
         }
 
         async function accessWeeklyReports(location) {
             const links = await fetchJson('links.json');
             const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
-            window.open(url, '_blank'); // Opens in a new tab
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert(`No weekly report found for ${location}.`);
+            }
         }
 
         function redirectToResults() {
@@ -129,7 +137,11 @@
         async function accessStudentLists() {
             const links = await fetchJson('links.json');
             const url = links.student_lists_link;
-            window.open(url, '_blank'); // Opens in a new tab
+            if (url) {
+                window.open(url, '_blank'); // Opens in a new tab
+            } else {
+                alert('No student list found.');
+            }
         }
 
         async function accessSchoolDatabase() {
