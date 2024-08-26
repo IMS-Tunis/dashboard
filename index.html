@@ -25,7 +25,8 @@
                 <option value="year3">Year 3</option>
                 <option value="year4">Year 4</option>
                 <option value="year5">Year 5</option>
-                <option value="year6">Year 6</option>
+                <option value="year6A">Year 6.A</option>
+                <option value="year6B">Year 6.B</option>
                 <option value="year7">Year 7</option>
                 <option value="year8">Year 8</option>
                 <option value="year9">Year 9</option>
@@ -41,7 +42,8 @@
         <div class="frame">
             <h2>Weekly Reports</h2>
             <p class="note">Weekly reports will be automatically sent every Thursday at 17:00.</p>
-            <button onclick="accessWeeklyReports()">Go to Reports</button>
+            <button onclick="accessWeeklyReports('LAC')">LAC Weekly Reports</button>
+            <button onclick="accessWeeklyReports('Charguia')">Charguia Weekly Reports</button>
         </div>
 
         <!-- Frame 3 - Grade Submission -->
@@ -103,9 +105,9 @@
             window.open(url, '_blank'); // Opens in a new tab
         }
 
-        async function accessWeeklyReports() {
+        async function accessWeeklyReports(location) {
             const links = await fetchJson('links.json');
-            const url = links.weekly_reports_link;
+            const url = location === 'LAC' ? links.weekly_reports_link : links.charguia_weekly_reports_link;
             window.open(url, '_blank'); // Opens in a new tab
         }
 
