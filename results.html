@@ -18,115 +18,111 @@
     </div>
 
     <script>
-        async function fetchJson(file) {
-            const response = await fetch(file);
-            return await response.json();
-        }
+    async function fetchJson(file) {
+        const response = await fetch(file);
+        return await response.json();
+    }
 
-        async function displayResults(section, passcode) {
-            try {
-                const passcodes = await fetchJson('passcodes.json');
-                const links = await fetchJson('links.json');
+    async function displayResults(section, passcode) {
+        try {
+            const passcodes = await fetchJson('passcodes.json');
+            const links = await fetchJson('links.json');
 
-                if (!passcodes[passcode]) {
-                    document.getElementById('results').innerHTML = '<p>Invalid passcode. Please try again.</p>';
-                    return;
-                }
-
-                let resultsHTML = '';
-
-                switch (section) {
-                    case 'gradeSubmission':
-                        resultsHTML = displayGradeSubmission(passcodes, links, passcode);
-                        break;
-                    case 'reportCards':
-                        resultsHTML = displayReportCards(passcodes, links, passcode);
-                        break;
-                    case 'schoolDatabase':
-                        resultsHTML = displaySchoolDatabase(passcodes, links, passcode);
-                        break;
-                    case 'pedagogicResources':
-                        resultsHTML = displayPedagogicResources(passcodes, links, passcode);
-                        break;
-                    default:
-                        resultsHTML = '<p>No results available for this section.</p>';
-                }
-
-                document.getElementById('results').innerHTML = resultsHTML;
-            } catch (error) {
-                console.error('Error displaying results:', error);
-                document.getElementById('results').innerHTML = '<p>Error loading results. Please try again later.</p>';
-            }
-        }
-
-        function displayGradeSubmission(passcodes, links, passcode) {
-            const assignedSubjects = passcodes[passcode].years;
-            let resultsHTML = '<h3>Grade Submission</h3><ul>';
-
-            for (const year in assignedSubjects) {
-                if (year !== 'report_card' && year !== 'admin' && year !== 'pedagogic') {
-                    assignedSubjects[year].forEach(subject => {
-                        if (links[year] && links[year][subject]) {
-                            resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject} (Year ${year})</a></li>`;
-                        }
-                    });
-                }
+            if (!passcodes[passcode]) {
+                document.getElementById('results').innerHTML = '<p>Invalid passcode. Please try again.</p>';
+                return;
             }
 
-            resultsHTML += '</ul>';
-            return resultsHTML;
-        }
+            let resultsHTML = '';
 
-        function displayReportCards(passcodes, links, passcode) {
-            const assignedYear = passcodes[passcode].years.report_card;
-            const reportCardLink = links[`report_card_${assignedYear}`];
-
-            if (reportCardLink) {
-                return `<h3>Report Card</h3><ul><li><a href="${reportCardLink}" target="_blank">Report Card for Year ${assignedYear}</a></li></ul>`;
-            } else {
-                return '<p>No report card available for this year.</p>';
+            switch (section) {
+                case 'gradeSubmission':
+                    resultsHTML = displayGradeSubmission(passcodes, links, passcode);
+                    break;
+                case 'reportCards':
+                    resultsHTML = displayReportCards(passcodes, links, passcode);
+                    break;
+                case 'schoolDatabase':
+                    resultsHTML = displaySchoolDatabase(passcodes, links, passcode);
+                    break;
+                case 'pedagogicResources':
+                    resultsHTML = displayPedagogicResources(passcodes, links, passcode);
+                    break;
+                default:
+                    resultsHTML = '<p>No results available for this section.</p>';
             }
+
+            document.getElementById('results').innerHTML = resultsHTML;
+        } catch (error) {
+            console.error('Error displaying results:', error);
+            document.getElementById('results').innerHTML = '<p>Error loading results. Please try again later.</p>';
         }
+    }
 
-        function displaySchoolDatabase(passcodes, links, passcode) {
-            if (passcodes[passcode].years.admin) {
-                return `<h3>School Database</h3><ul><li><a href="${links.school_database_link_admin}" target="_blank">Access School Database</a></li></ul>`;
-            } else {
-                return '<p>Invalid passcode for accessing the school database.</p>';
-            }
-        }
+    function displayGradeSubmission(passcodes, links, passcode) {
+        const assignedSubjects = passcodes[passcode].years;
+        let resultsHTML = '<h3>Grade Submission</h3><ul>';
 
-        function displayPedagogicResources(passcodes, links, passcode) {
-            const assignedResources = passcodes[passcode].years.pedagogic;
-            let resultsHTML = '<h3>Pedagogic Resources</h3><ul>';
-
-            if (Array.isArray(assignedResources)) {
-                // Admin: Display all resources
-                assignedResources.forEach(link => {
-                    resultsHTML += `<li><a href="${link}" target="_blank">Workspace</a></li>`;
+        for (const year in assignedSubjects) {
+            if (year !== 'admin') {
+                assignedSubjects[year].forEach(subject => {
+                    if (links[year] && links[year][subject]) {
+                        resultsHTML += `<li><a href="${links[year][subject]}" target="_blank">${subject} (Year ${year})</a></li>`;
+                    }
                 });
-            } else {
-                // Teacher: Display only their resource
-                const workspaceLink = links.pedagogic_resources[passcode];
-                if (workspaceLink) {
-                    resultsHTML += `<li><a href="${workspaceLink}" target="_blank">Workspace</a></li>`;
-                } else {
-                    resultsHTML = '<p>No workspace found for this passcode.</p>';
-                }
             }
-
-            resultsHTML += '</ul>';
-            return resultsHTML;
         }
 
-        const urlParams = new URLSearchParams(window.location.search);
-        const section = urlParams.get('section');
-        const passcode = urlParams.get('passcode');
-        if (section && passcode) {
-            displayResults(section, passcode);
+        resultsHTML += '</ul>';
+        return resultsHTML;
+    }
+
+    function displayReportCards(passcodes, links, passcode) {
+        const assignedYear = passcodes[passcode].years.report_card;
+        const reportCardLink = links[`report_card_${assignedYear}`];
+
+        if (reportCardLink) {
+            return `<h3>Report Card</h3><ul><li><a href="${reportCardLink}" target="_blank">Report Card for Year ${assignedYear}</a></li></ul>`;
         } else {
-            document.getElementById('results').innerHTML = '<p>No passcode or section provided.</p>';
+            return '<p>No report card available for this year.</p>';
         }
-    </script>
+    }
+
+    function displaySchoolDatabase(passcodes, links, passcode) {
+        if (passcodes[passcode].role === 'admin') {
+            return `<h3>School Database</h3><ul><li><a href="${links.school_database_link_admin}" target="_blank">Access School Database</a></li></ul>`;
+        } else {
+            return '<p>Invalid passcode for accessing the school database.</p>';
+        }
+    }
+
+    function displayPedagogicResources(passcodes, links, passcode) {
+        let resultsHTML = '<h3>Pedagogic Resources</h3><ul>';
+        const resourceLinks = passcodes[passcode].pedagogic_resource;
+
+        if (Array.isArray(resourceLinks)) {
+            // Admin: Display all resources
+            resourceLinks.forEach(link => {
+                resultsHTML += `<li><a href="${link}" target="_blank">Workspace</a></li>`;
+            });
+        } else {
+            // Teacher: Display only their resource
+            resultsHTML += `<li><a href="${resourceLinks}" target="_blank">Workspace</a></li>`;
+        }
+
+        resultsHTML += '</ul>';
+        return resultsHTML;
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const section = urlParams.get('section');
+    const passcode = urlParams.get('passcode');
+    if (section && passcode) {
+        displayResults(section, passcode);
+    } else {
+        document.getElementById('results').innerHTML = '<p>No passcode or section provided.</p>';
+    }
+</script>
+
 </body>
 </html>
