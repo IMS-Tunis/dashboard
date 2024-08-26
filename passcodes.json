@@ -4,7 +4,8 @@
         "email": "johndoe@example.com",
         "years": {
             "3": ["EN", "MA", "SC"],
-            "4": ["EN"]
+            "4": ["EN"],
+            "pedagogic": "teacher1_workspace"
         }
     },
     "5678": {
@@ -12,7 +13,8 @@
         "email": "janesmith@example.com",
         "years": {
             "5": ["PH", "BI", "CH"],
-            "6": ["BU", "IC"]
+            "6": ["BU", "IC"],
+            "pedagogic": "teacher2_workspace"
         }
     },
     "4321": {
@@ -20,30 +22,8 @@
         "email": "michaeljohnson@example.com",
         "years": {
             "7": ["EN", "MA"],
-            "8": ["PH", "SC"]
-        }
-    },
-    "8765": {
-        "name": "Emily Davis",
-        "email": "emilydavis@example.com",
-        "years": {
-            "9": ["CH", "AR"],
-            "10": ["FR", "IS"]
-        }
-    },
-    "9876": {
-        "name": "Sarah Brown",
-        "email": "sarahbrown@example.com",
-        "years": {
-            "11": ["EN", "GP"],
-            "12": ["TU", "PE"]
-        }
-    },
-    "5432": {
-        "name": "James Wilson",
-        "email": "jameswilson@example.com",
-        "years": {
-            "13": ["ART", "MU"]
+            "8": ["PH", "SC"],
+            "admin": ["school_database_link_admin"]
         }
     },
     "admin": {
@@ -60,7 +40,9 @@
             "10": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "11": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
             "12": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
-            "13": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"]
+            "13": ["EN", "MA", "SC", "PH", "BI", "CH", "BU", "IC", "GP", "AR", "TU", "FR", "IS", "PE", "ART", "MU"],
+            "admin": ["school_database_link_admin"],
+            "pedagogic": "pedagogic_resources_link_admin"
         }
     }
 }
