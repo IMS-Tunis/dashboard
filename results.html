@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Submission Results</title>
+    <title>Results</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="header">
         <img src="vectmaarif.png" alt="Maarif Logo" class="header-logo left-logo">
-        <h1 class="header-title">Grade Submission Results</h1>
+        <h1 class="header-title">Results</h1>
         <img src="vectcambridge.png" alt="Cambridge Logo" class="header-logo right-logo">
     </header>
 
@@ -60,7 +60,7 @@
         if (passcode) {
             displayResults(passcode);
         } else {
-            document.getElementById('results').innerHTML = '<p>Invalid passcode.</p>';
+            document.getElementById('results').innerHTML = '<p>No passcode provided.</p>';
         }
     </script>
 </body>
