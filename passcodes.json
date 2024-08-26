@@ -4,7 +4,7 @@
         "email": "johndoe@example.com",
         "years": {
             "3": ["EN", "MA", "SC"],
-            "report_card": "report_card_year3"
+            "report_card": "year3"
         }
     },
     "5678": {
@@ -12,25 +12,16 @@
         "email": "janesmith@example.com",
         "years": {
             "4": ["EN"],
-            "report_card": "report_card_year4"
-        }
-    },
-    "4321": {
-        "name": "Michael Johnson",
-        "email": "michaeljohnson@example.com",
-        "years": {
-            "7": ["EN", "MA"],
-            "8": ["PH", "SC"],
-            "report_card": "report_card_year7"
+            "report_card": "year4"
         }
     },
     "8765": {
         "name": "Emily Davis",
         "email": "emilydavis@example.com",
         "years": {
-            "9": ["CH", "AR"],
-            "10": ["FR", "IS"],
-            "report_card": "report_card_year9"
+            "6A": ["EN", "MA"],
+            "6B": ["PH", "SC"],
+            "report_card": "year6A"
         }
     },
     "9876": {
@@ -39,7 +30,7 @@
         "years": {
             "11": ["EN", "GP"],
             "12": ["TU", "PE"],
-            "report_card": "report_card_year11"
+            "report_card": "year11"
         }
     },
     "5432": {
@@ -47,7 +38,7 @@
         "email": "jameswilson@example.com",
         "years": {
             "13": ["ART", "MU"],
-            "report_card": "report_card_year13"
+            "report_card": "year13"
         }
     },
     "admin": {
