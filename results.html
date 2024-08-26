@@ -107,7 +107,12 @@
                 });
             } else {
                 // Teacher: Display only their resource
-                resultsHTML += `<li><a href="${assignedResources}" target="_blank">Workspace</a></li>`;
+                const workspaceLink = links.pedagogic_resources[passcode];
+                if (workspaceLink) {
+                    resultsHTML += `<li><a href="${workspaceLink}" target="_blank">Workspace</a></li>`;
+                } else {
+                    resultsHTML = '<p>No workspace found for this passcode.</p>';
+                }
             }
 
             resultsHTML += '</ul>';
