@@ -3,40 +3,17 @@
     {
       "passcode": "1234",
       "name": "Teacher One",
-      "email": "teacher1@example.com",
-      "years": ["3"],
-      "subjects": ["EN", "MA", "SC"],
       "pedagogic_link": "https://example.com/pedagogic/teacher1"
     },
     {
       "passcode": "5678",
       "name": "Teacher Two",
-      "email": "teacher2@example.com",
-      "years": ["4", "5"],
-      "subjects": ["PH", "BI", "CH"],
       "pedagogic_link": "https://example.com/pedagogic/teacher2"
     },
     {
-      "passcode": "9012",
-      "name": "Teacher Three",
-      "email": "teacher3@example.com",
-      "years": ["6A", "6B"],
-      "subjects": ["BU", "IC", "GP"],
-      "pedagogic_link": "https://example.com/pedagogic/teacher3"
-    },
-    {
-      "passcode": "3456",
-      "name": "Teacher Four",
-      "email": "teacher4@example.com",
-      "years": ["7", "8"],
-      "subjects": ["AR", "TU", "FR"],
-      "pedagogic_link": "https://example.com/pedagogic/teacher4"
-    },
-    {
-      "passcode": "admin_passcode",
+      "passcode": "admin",
       "name": "Admin",
-      "email": "admin@example.com",
-      "admin": true
+      "pedagogic_link": "https://example.com/pedagogic/admin"
     }
   ]
 }
