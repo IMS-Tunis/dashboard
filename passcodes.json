@@ -1,0 +1,52 @@
+{
+    "teacher1_passcode": {
+        "name": "Teacher One",
+        "email": "teacher1@example.com",
+        "years": {
+            "3": ["EN", "MA"],
+            "5": ["BI", "CH"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher1"
+    },
+    "teacher2_passcode": {
+        "name": "Teacher Two",
+        "email": "teacher2@example.com",
+        "years": {
+            "4": ["SC", "PH"],
+            "6A": ["EN", "MA"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher2"
+    },
+    "teacher3_passcode": {
+        "name": "Teacher Three",
+        "email": "teacher3@example.com",
+        "years": {
+            "6B": ["BI", "CH"],
+            "7": ["GP", "AR"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher3"
+    },
+    "teacher4_passcode": {
+        "name": "Teacher Four",
+        "email": "teacher4@example.com",
+        "years": {
+            "8": ["EN", "MA"],
+            "9": ["TU", "FR"]
+        },
+        "pedagogic_resource": "https://example.com/pedagogic/teacher4"
+    },
+    "admin_passcode": {
+        "name": "Admin",
+        "email": "admin@example.com",
+        "role": "admin",
+        "years": {
+            "admin": ["all"]
+        },
+        "pedagogic_resource": [
+            "https://example.com/pedagogic/teacher1",
+            "https://example.com/pedagogic/teacher2",
+            "https://example.com/pedagogic/teacher3",
+            "https://example.com/pedagogic/teacher4"
+        ]
+    }
+}
