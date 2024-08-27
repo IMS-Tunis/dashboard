@@ -11,6 +11,7 @@
 
     <script>
         const user = JSON.parse(sessionStorage.getItem('user'));
+        alert("User Data: " + JSON.stringify(user));  // Debugging alert
 
         if (!user) {
             document.getElementById('links').innerHTML = '<p>No passcode provided or invalid passcode.</p>';
@@ -20,10 +21,12 @@
         fetch('links.json')
             .then(response => response.json())
             .then(linksData => {
+                alert("Fetched Links: " + JSON.stringify(linksData));  // Debugging alert
                 let linksHTML = `<p>Welcome, ${user.name}</p><ul>`;
 
                 // Assuming that links are categorized by passcode in links.json
                 const userLinks = linksData[user.passcode];
+                alert("User Links: " + JSON.stringify(userLinks));  // Debugging alert
                 if (userLinks) {
                     for (const [title, url] of Object.entries(userLinks)) {
                         linksHTML += `<li><a href="${url}" target="_blank">${title}</a></li>`;
