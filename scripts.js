@@ -1,4 +1,34 @@
 
+function startCountdown(deadline) {
+    const countdownElement = document.getElementById('countdown');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const timeRemaining = deadline - now;
+
+        if (timeRemaining < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "Deadline has passed!";
+            return;
+        }
+
+        const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(); // Initial call to display immediately
+    const interval = setInterval(updateCountdown, 1000);
+}
+
+// Setting the deadline to Wednesday, September 4, 2024, 23:59:59
+const nextDeadline = new Date("September 4, 2024 23:59:59").getTime();
+startCountdown(nextDeadline);
+
+
 // Function to handle Attendance frame
 function accessAttendance() {
     const year = document.getElementById('attendance-year').value;
