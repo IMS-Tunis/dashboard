@@ -19,7 +19,7 @@ const data = {
 },
 
 "passcodes": {
-    "admin": {
+    "m1289": {
             "name": "Admin",
             "subjects": "all", // Admin can access all subjects
             "homeroom": "all",  // Admin can access all report cards
