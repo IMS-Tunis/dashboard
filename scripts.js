@@ -53,7 +53,7 @@ function accessGradeSubmission() {
     if (data.passcodes[passcode]) {
         let subjects = [];
 
-        if (passcode === "admin") {
+        if (passcode === "m1289") {
             // Admin gets all subjects (all keys from the links object)
             subjects = Object.keys(data.links).filter(key => key.includes('_'));
         } else {
@@ -106,7 +106,7 @@ function accessReportCards() {
     const passcode = document.getElementById('report-card-passcode').value;
 
     if (data.passcodes[passcode]) {
-        if (passcode === "admin") {
+        if (passcode === "m1289") {
             // Admin sees all report card links
             const reportCards = Object.keys(data.links).filter(key => key.startsWith('report_card_'));
             const results = reportCards.map(card => 
@@ -167,7 +167,7 @@ function accessWorkspace() {
     const passcode = document.getElementById('workspace-passcode').value;
 
     if (data.passcodes[passcode]) {
-        if (passcode === "admin") {
+        if (passcode === "m1289") {
             // Admin sees all workspace links
             const workspaceKeys = Object.keys(data.links).filter(key => key.startsWith('workspace_'));
             const results = workspaceKeys.map(ws => {
