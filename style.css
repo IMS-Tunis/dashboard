@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-	 box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .header-left, .header-right {
@@ -27,13 +27,13 @@ header {
 .logo-left {
     max-width: 70%;
     height: auto;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .logo-right {
-	max-width: 100%;
+    max-width: 100%;
     height: auto;
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -88,6 +88,63 @@ select, input[type="text"] {
     border-radius: 5px;
     border: 1px solid #ccc;
     width: calc(100% - 22px);
+}
+
+/* New Frame 0 Styles */
+.frame0 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    grid-column: span 2; /* Span across both columns */
+}
+
+.announcement-board {
+    font-size: 1.5rem; /* Adjust font size to make it smaller */
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    flex: 1; /* Adjust this value to control size */
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+    align-items: center;
+}
+
+.announcement-details {
+    flex: 3; /* Adjust this value to control size */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	  margin-bottom: 5px; /* Reduced margin below the heading */
+    line-height: 0.8; /* Adjust line height to make the spacing tighter */
+}
+
+
+.announcement-details h3 {
+    font-size: 1rem;
+    color: #555;
+	    margin-bottom: 5px; /* Reduced margin after each paragraph */
+    line-height: 0.8; /* Adjust line height for tighter spacing */
+}
+
+.countdown {
+    font-size: 1.5rem;
+    color: red;
+	  margin-bottom: 5px; /* Reduced space below countdown */
+    line-height: 0.8; /* Adjust line height for tighter spacing */
+}
+
+.dinner-announcement {
+    font-size: 1.25rem;
+    color: #333;
 }
 
 footer {
