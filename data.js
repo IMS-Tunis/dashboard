@@ -163,7 +163,7 @@ const data = {
         "9228": {
             "name": "Zeyneb Fajraoui",
             "workspace": "workspace_9228"
-        }
+        },
     },
 "links": {
     "lac": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EbZ2mtH7ZVtOjtf4-Pug8gMBY_AXYOx424kwN_YhzHJoTQ?e=buIXip",
