@@ -205,5 +205,5 @@ const data = {
         "workspace_5456": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EhH1ohjwZgNJuWXvOGztrCIBVwLE9I6z-I8FOpyLKZoUKg?e=N5erMp",
         "workspace_9228": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsvGhYUrlXpFoK6dFyKJKxUBK-puNd4az6t6Dn9TAoFm8A?e=bDKZ4Y",
 	"workspace_7193": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/Ev-Fdne8WClIjsLzfQIYmxQBwGIMKmWJ55MaFTlo4Mp0PA?e=UTlauy"
-   }
+   },
 };
