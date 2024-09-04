@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMST Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="data.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="vectmaarif.png" alt="Logo" class="logo-left">
+        </div>
+        <div class="header-center">
+            <h1>IMST DASHBOARD 2024-2025</h1>
+        </div>
+        <div class="header-right">
+            <img src="vectcambridge.png" alt="Logo" class="logo-right">
+        </div>
+    </header>
+    <main class="grid-container">
+        
+        <!-- Frame 0: Announcement Board (Spans 2 columns) -->
+        <div class="frame0" style="grid-column: span 2;">
+            <div class="announcement-board">
+                <h2>Announcement Board</h2>
+            </div>
+            <div class="announcement-details">
+                <h3>Upcoming Deadline: </h3>
+				<p>Submitting the yearly plans and September's weekly plans.</p>
+                <div id="countdown" class="countdown"></div>
+                <h3>Upcoming Event: </h3>
+            <p>Dinner on the 5th of September at 18:00 at Beyzade Restaurant, Lac 1</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Frame 1: Attendance -->
+        <div class="frame">
+            <h2>Attendance</h2>
+            <p style="font-size: 14px;">Teachers are responsible for taking attendance at the end of the first session in <B>Attendance register</B> sheet.
+			<br> Nurses will call parents to report absences and document the reasons in <B>Absence reasons</B> sheet.</p>
+            <select id="attendance-year">
+                <option value="">Select Year</option>
+                <option value="year_0">Year 0</option>
+                <option value="year_1">Year 1</option>
+                <option value="year_2">Year 2</option>
+                <option value="year_3">Year 3</option>
+				<option value="year_4">Year 4</option>
+                <option value="year_5">Year 5</option>
+                <option value="year_6A">Year 6A</option>
+                <option value="year_6B">Year 6B</option>
+				<option value="year_7">Year 7</option>
+                <option value="year_8">Year 8</option>
+                <option value="year_9">Year 9</option>
+                <option value="year_10">Year 10</option>
+				<option value="year_11">Year 11</option>
+                <option value="year_12">Year 12</option>
+				<option value="year_13">Year 13</option>
+            </select>
+            <button onclick="accessAttendance()">Access Attendance</button>
+        </div>
+
+        <!-- Frame 2: Weekly Reports -->
+        <div id="weekly-reports-frame" class="frame">
+            <h2>Weekly Reports</h2>
+            <p>Weekly reports will be automatically sent every Friday at 17:00</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="weekly-passcode" placeholder="Enter Passcode">
+
+            <!-- Buttons for Weekly Reports -->
+            <div id="weekly-buttons">
+                <button id="lac-button" onclick="validateAndOpenReport('lac')">LAC</button>
+                <button id="charguia-button" onclick="validateAndOpenReport('charguia')">Charguia</button>
+            </div>
+        </div>
+
+        <!-- Frame 3: Grade Submission -->
+        <div id="report-cards-frame" class="frame">
+            <h2>Grade Submission</h2>
+            <p>Each teacher can access and submit grades for their subjects.</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="report-passcode" placeholder="Enter Passcode">
+
+            <!-- Button to Submit Passcode -->
+            <button onclick="accessGradeSubmission()">Access Grade Submission</button>
+        </div>
+
+        <!-- Frame 4: Report Cards -->
+        <div id="report-cards-frame" class="frame">
+            <h2>Report Cards</h2>
+            <p>Homeroom teachers can access report cards for a check before printing.</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="report-card-passcode" placeholder="Enter Passcode">
+
+            <!-- Button to Submit Passcode -->
+            <button onclick="validateReportCardPasscode()">Access report cards</button>
+        </div>
+
+        <!-- Frame 5: Student Lists -->
+        <div id="student-lists-frame" class="frame">
+            <h2>Student Lists</h2>
+            <p>The updated students list can be accessed here.</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="student-list-passcode" placeholder="Enter Passcode">
+
+            <!-- Button to Submit Passcode -->
+            <button onclick="validateStudentListPasscode()">Access Student List</button>
+        </div>
+
+        <!-- Frame 6: School Database -->
+        <div class="frame">
+            <h2>School Database</h2>
+            <p>Admin officers are responsible for maintaining the school database up-to-date.</p>
+            <input type="text" id="database-passcode" placeholder="Enter your passcode">
+            <button onclick="accessDatabase()">Access Database</button>
+        </div>
+
+        <!-- Frame 7: Pedagogic Resources -->
+        <div id="workspace-frame" class="frame">
+            <h2>Access Workspace</h2>
+            <p>Teachers can access their workspaces and submit their pedagogic resources</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="workspace-passcode" placeholder="Enter Passcode">
+
+            <!-- Button to Submit Passcode -->
+            <button onclick="accessWorkspace()">Access Workspace</button>
+        </div>
+
+        <!-- Frame 8: Disciplinary Actions -->
+        <div class="frame">
+            <h2>Disciplinary Actions</h2>
+            <p>Teachers can record their disciplinary actions here.</p>
+            <button onclick="openDisciplinaryLink('LAC')">Disciplinary of LAC</button>
+            <button onclick="openDisciplinaryLink('Charguia')">Disciplinary of Charguia</button>
+        </div>
+
+    </main>
+    <footer>
+        <p>Note: Admin staff have a supercode to access everything.</p>
+    </footer>
+</body>
+</html>

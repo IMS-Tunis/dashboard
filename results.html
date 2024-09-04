@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        table {
+            width: 80%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            white-space: nowrap; /* Prevent text wrapping */
+        }
+
+        th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .link-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="loadResults()">
+    <header class="main-header">
+        <img id="left-image" src="vectmaarif.png" alt="Maarif Logo" style="width: 80px;">
+        <h1>Teachers Workspaces</h1>
+        <img id="right-image" src="vectcambridge.png" alt="Cambridge Logo" style="width: 120px;">
+    </header>
+
+    <div class="container">
+        <table id="results-table">
+            <thead>
+                <tr>
+                    <th>Teacher Name</th>
+                    <th>Passcode</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Results will be dynamically inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>Note: Admin staff have a supercode to access all sections of the dashboard.</p>
+    </footer>
+
+    <script>
+        function loadResults() {
+            const resultsTableBody = document.getElementById('results-table').getElementsByTagName('tbody')[0];
+            resultsTableBody.innerHTML = localStorage.getItem('results') || "<tr><td colspan='3'>No results available</td></tr>";
+        }
+    </script>
+</body>
+</html>
