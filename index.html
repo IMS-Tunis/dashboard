@@ -134,20 +134,24 @@
             <button onclick="accessWorkspace()">Access Workspace</button>
         </div>
 
-        <!-- Frame 8: Disciplinary -->
-        <div id="weekly-reports-frame" class="frame">
-            <h2>Disciplinary actions</h2>
-            <p>All disciplinary actions should be recorded to be shown to parents whenever needed</p>
-            
-            <!-- Input Box for Passcode -->
-            <input type="text" id="weekly-passcode" placeholder="Enter Passcode">
+<!-- Frame 8: Disciplinary Actions -->
+<div id="disciplinary-actions-frame" class="frame">
+    <h2>Disciplinary Actions</h2>
+    <p>Enter the passcode to access disciplinary records for both LAC and Charguia.</p>
 
-            <!-- Buttons for Weekly Reports -->
-            <div id="weekly-buttons">
-                <button id="lac-button" onclick="validateAndOpenDisciplinary('LAC')">LAC</button>
-                <button id="charguia-button" onclick="validateAndOpendisciplinary('charguia')">Charguia</button>
-            </div>
-        </div>
+    <!-- Input Box for Passcode -->
+    <input type="text" id="disciplinary-passcode" placeholder="Enter Passcode">
+
+    <!-- Button to Submit Passcode -->
+    <button onclick="accessDisciplinaryActions()">Access Disciplinary Records</button>
+    
+    <!-- Buttons for LAC and Charguia (hidden initially) -->
+    <div id="disciplinary-links" style="display:none;">
+        <button id="lac-link">LAC Disciplinary Records</button>
+        <button id="charguia-link">Charguia Disciplinary Records</button>
+    </div>
+</div>
+
 
     </main>
     <footer>
