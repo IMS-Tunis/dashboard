@@ -207,9 +207,24 @@ function accessWorkspace() {
 
 
 
+function validateAndOpenDisciplinary(reportType) {
+    const passcode = document.getElementById('weekly-passcode').value;
 
-// Function to handle Disciplinary Actions (Frame 8)
-function openDisciplinaryLink(linkType) {
-    const link = data.links[`disciplinary_${linkType.toLowerCase()}`];
-    window.open(link, '_blank');
+    // Check if the passcode exists in data.js
+    if (data.passcodes[passcode]) {
+        // If passcode is valid, open the report
+        openWeeklyDisciplinary(reportType);
+    } else {
+        // If passcode is invalid, show an alert denying access
+        alert("Invalid passcode. Please try again.");
+    }
+}
+
+function openWeeklyDisciplinary(reportType) {
+    const link = data.links[reportType.toLowerCase()];
+    if (link) {
+        window.open(link, '_blank'); // Always open in a new tab
+    } else {
+        alert("Report not found.");
+    }
 }
