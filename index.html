@@ -137,20 +137,18 @@
 <!-- Frame 8: Disciplinary Actions -->
 <div id="disciplinary-actions-frame" class="frame">
     <h2>Disciplinary Actions</h2>
-    <p>Enter the passcode to access disciplinary records for both LAC and Charguia.</p>
+    <p>Enter the passcode to access disciplinary records for LAC and Charguia.</p>
 
     <!-- Input Box for Passcode -->
     <input type="text" id="disciplinary-passcode" placeholder="Enter Passcode">
 
-    <!-- Button to Submit Passcode -->
-    <button onclick="validateDisciplinaryPasscode()">Submit Passcode</button>
-    
     <!-- Buttons for LAC and Charguia -->
     <div id="disciplinary-buttons">
-        <button id="lac-link">LAC Disciplinary Records</button>
-        <button id="charguia-link">Charguia Disciplinary Records</button>
+        <button id="lac-link" onclick="openDisciplinaryLink('lac')">LAC Disciplinary Records</button>
+        <button id="charguia-link" onclick="openDisciplinaryLink('charguia')">Charguia Disciplinary Records</button>
     </div>
 </div>
+
 
 
 
