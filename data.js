@@ -397,6 +397,12 @@ const data = {
 			"subjects": ["y6B_ma", "y7_ma", "y8_ma", "y9_ma"],
 			"homeroom": "y8_hr",
             "workspace": "workspace_9228"
+        },
+	     "7591": {
+            "name": "Youssef Torjmane",
+			"subjects": ["y6B_sc", "y6A_sc"],
+			"homeroom": "y6A_hr",
+            "workspace": "workspace_7591"
         }
     },
 "links": {
