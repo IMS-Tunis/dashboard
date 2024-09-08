@@ -410,8 +410,8 @@ const data = {
     "charguia": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EegsqjrYJz1FksYT-fel6v0BbtIu5BzM_g1hejheC4GHtw?e=svf1Hm",
     "student_lists": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUuugrXLwG5Nmjny5kOuSooBr7gw4jcKx56fTcy47QzIzg?e=c6N2gw",
     "school_database": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETctFyqP7YJIvJi84sjrFGcBFU7D0yLzCiPLv7mSzrY-eA?e=shN7jW",
-
-	
+"Disciplinary_lac": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ESZcgM1edVpImtFsxgDUF_oB-vHoQmP-UlVdX4OAXGkMLQ?e=CMSHUV",
+"Disciplinary_charguia": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EW8KqhuwDKpMgk7VxthSdIYBC4fX8Cj4T3aqwHzykHo78A?e=2TTqhP",	
         "workspace_7591": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsaeRsQePORBiSmXA4Z8P7ABE5fHEZ5GORXxU8XkDdwbwQ?e=fhR9o4",
 	"workspace_1890": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/ElDVxEoA60xPvECyhjUBLYcBV4wZYTQGmRIjl3Mqv-Dr4g?e=1pJjVs",
         "workspace_2789": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/Epl7HnvsjCRDpEzx5DR01I4B-3IV8eqWaJ5lnv8sn71Yvw?e=ApUIO8",
