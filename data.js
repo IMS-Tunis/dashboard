@@ -392,12 +392,7 @@ const data = {
             "name": "Rania Ben Saad",
             "workspace": "workspace_7193"
         },
-	  "7591": {
-            "name": "Youssef Torjmane,
-            "workspace": "workspace_7591",
-	 "subjects": ["y6A_sc", "y6B_sc"],
-	"homeroom": "y6A_hr"
-        },
+
         "9228": {
             "name": "Zeyneb Fajraoui",
 			"subjects": ["y6B_ma", "y7_ma", "y8_ma", "y9_ma"],
