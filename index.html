@@ -134,17 +134,24 @@
             <button onclick="accessWorkspace()">Access Workspace</button>
         </div>
 
-        <!-- Frame 8: Disciplinary Actions -->
-        <div class="frame">
-            <h2>Disciplinary Actions</h2>
-            <p>Teachers can record their disciplinary actions here.</p>
-            <button onclick="openDisciplinaryLink('LAC')">Disciplinary of LAC</button>
-            <button onclick="openDisciplinaryLink('Charguia')">Disciplinary of Charguia</button>
+        <!-- Frame 8: Disciplinary -->
+        <div id="weekly-reports-frame" class="frame">
+            <h2>Disciplinary actions</h2>
+            <p>All disciplinary actions should be recorded to be shown to parents whenever needed</p>
+            
+            <!-- Input Box for Passcode -->
+            <input type="text" id="weekly-passcode" placeholder="Enter Passcode">
+
+            <!-- Buttons for Weekly Reports -->
+            <div id="weekly-buttons">
+                <button id="lac-button" onclick="validateAndOpenDisciplinary('LAC')">LAC</button>
+                <button id="charguia-button" onclick="validateAndOpendisciplinary('charguia')">Charguia</button>
+            </div>
         </div>
 
     </main>
     <footer>
-        <p>Note: Admin staff have a supercode to access everything.</p>
+        <p>Note: Admin staff have a supercode to access everything in this plateform.</p>
     </footer>
 </body>
 </html>
