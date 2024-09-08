@@ -206,25 +206,24 @@ function accessWorkspace() {
 }
 
 
+// Function to handle Disciplinary Actions frame
+function accessDisciplinaryActions() {
+    const passcode = document.getElementById('disciplinary-passcode').value;
 
-function validateAndOpenDisciplinary(reportType) {
-    const passcode = document.getElementById('weekly-passcode').value;
-
-    // Check if the passcode exists in data.js
     if (data.passcodes[passcode]) {
-        // If passcode is valid, open the report
-        openWeeklyDisciplinary(reportType);
+        // Show the disciplinary links once the passcode is validated
+        document.getElementById('disciplinary-links').style.display = 'block';
+
+        // Set the href for the LAC and Charguia buttons
+        document.getElementById('lac-link').onclick = function() {
+            window.open(data.links["disciplinary_lac"], '_blank');
+        };
+
+        document.getElementById('charguia-link').onclick = function() {
+            window.open(data.links["disciplinary_charguia"], '_blank');
+        };
     } else {
-        // If passcode is invalid, show an alert denying access
-        alert("Invalid passcode. Please try again.");
+        alert("Incorrect passcode.");
     }
 }
 
-function openWeeklyDisciplinary(reportType) {
-    const link = data.links[reportType.toLowerCase()];
-    if (link) {
-        window.open(link, '_blank'); // Always open in a new tab
-    } else {
-        alert("Report not found.");
-    }
-}
