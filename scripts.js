@@ -206,24 +206,18 @@ function accessWorkspace() {
 }
 
 
-// Function to validate the passcode and allow access to links
-function validateDisciplinaryPasscode() {
+// Function to open the disciplinary link based on the location (LAC or Charguia)
+function openDisciplinaryLink(location) {
     const passcode = document.getElementById('disciplinary-passcode').value;
 
+    // Check if the passcode is valid
     if (data.passcodes[passcode]) {
-        // If the passcode is valid, allow opening both links
-        document.getElementById('lac-link').onclick = function() {
-            window.open(data.links["disciplinary_lac"], '_blank');
-        };
-
-        document.getElementById('charguia-link').onclick = function() {
-            window.open(data.links["disciplinary_charguia"], '_blank');
-        };
+        // Open the respective disciplinary link (LAC or Charguia)
+        const disciplinaryLink = data.links[`disciplinary_${location}`];
+        window.open(disciplinaryLink, '_blank');
     } else {
         alert("Incorrect passcode.");
-        // Reset the links to do nothing if passcode is invalid
-        document.getElementById('lac-link').onclick = null;
-        document.getElementById('charguia-link').onclick = null;
     }
 }
+
 
