@@ -206,15 +206,12 @@ function accessWorkspace() {
 }
 
 
-// Function to handle Disciplinary Actions frame
-function accessDisciplinaryActions() {
+// Function to validate the passcode and allow access to links
+function validateDisciplinaryPasscode() {
     const passcode = document.getElementById('disciplinary-passcode').value;
 
     if (data.passcodes[passcode]) {
-        // Show the disciplinary links once the passcode is validated
-        document.getElementById('disciplinary-links').style.display = 'block';
-
-        // Set the href for the LAC and Charguia buttons
+        // If the passcode is valid, allow opening both links
         document.getElementById('lac-link').onclick = function() {
             window.open(data.links["disciplinary_lac"], '_blank');
         };
@@ -224,6 +221,9 @@ function accessDisciplinaryActions() {
         };
     } else {
         alert("Incorrect passcode.");
+        // Reset the links to do nothing if passcode is invalid
+        document.getElementById('lac-link').onclick = null;
+        document.getElementById('charguia-link').onclick = null;
     }
 }
 
