@@ -67,7 +67,7 @@ function openWeeklyReport(reportType) {
 function accessGradeSubmission() {
     const passcode = document.getElementById('report-passcode').value;
 
-    if (passcode === "m1289") {
+    if (passcode === "ad24min") {
         // Admin passcode: Display all subject links
         const allSubjects = Object.keys(data.subjects_links);
         const results = allSubjects.map(subject => 
@@ -98,7 +98,7 @@ function accessGradeSubmission() {
 function validateReportCardPasscode() {
     const passcode = document.getElementById('report-card-passcode').value;
 
-    if (passcode === "m1289") {
+    if (passcode === "ad24min") {
         // Admin passcode: Display all report card links
         const allReportCards = Object.keys(data.reportCards_links);
         const results = allReportCards.map(report => 
@@ -177,7 +177,7 @@ function accessWorkspace() {
     const passcode = document.getElementById('workspace-passcode').value;
 
     if (data.passcodes[passcode]) {
-        if (passcode === "m1289") {
+        if (passcode === "ad24min") {
             // Admin sees all workspace links
             const workspaceKeys = Object.keys(data.links).filter(key => key.startsWith('workspace_'));
             const results = workspaceKeys.map(ws => {
