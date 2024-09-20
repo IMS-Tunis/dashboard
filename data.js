@@ -312,6 +312,18 @@ const data = {
 			"homeroom": null,
             "workspace": "workspace_3344"
         },
+	       "5279": {
+            "name": "Hichem Maroueni",
+			"subjects": ["y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp"],
+			"homeroom": null,
+            "workspace": "workspace_5279"
+        },
+	       "8493": {
+            "name": "Rahma El Amri",
+			"subjects": ["y7_sc", "y8_sc", "y9_sc"],
+			"homeroom": null,
+            "workspace": "workspace_8493"
+        },
         "5690": {
             "name": "Manel Touihri",
 			"subjects": ["y10_ch", "y11_ch", "y12_ch", "y13_ch"],
@@ -449,6 +461,8 @@ const data = {
         "workspace_2468": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EuE5LK6lao9MvXYy6t14E6sBAjVkHek7otFlHIjfzfDvWw?e=SiCRCG",
         "workspace_9900": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EivdztZ-7TRPhy1SN-mfe9MBGeSiM49oBxX1zPH-p39aZw?e=QjlFfl",
         "workspace_5456": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EhH1ohjwZgNJuWXvOGztrCIBVwLE9I6z-I8FOpyLKZoUKg?e=N5erMp",
+	"workspace_5279": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EkfBSujm9FdGj7bUS2YR94IBYUKnNo83dck25R9N36VVOA?e=DG0OYh",
+	"workspace_8493": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsKJef33mV9In4DngG_fXkcBSJtU_8BDj2GeM8ZSdnVQUg?e=pofdsj",
         "workspace_9228": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsvGhYUrlXpFoK6dFyKJKxUBK-puNd4az6t6Dn9TAoFm8A?e=bDKZ4Y",
 	"workspace_7193": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/Ev-Fdne8WClIjsLzfQIYmxQBwGIMKmWJ55MaFTlo4Mp0PA?e=UTlauy"
    },
