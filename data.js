@@ -216,7 +216,7 @@ const data = {
 		
 		"1890": {
             "name": "Afef Ferchah",
-			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6A_is", "y6B_is", "y7_is", "y8_is", "y9_is"],
+			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6A_is", "y6B_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is"],
 			"homeroom": null,
             "workspace": "workspace_1890"
         },
@@ -302,7 +302,7 @@ const data = {
         },
         "4589": {
             "name": "Ibtihel Arfaoui",
-			"subjects": ["y3_en", "y3_gp", "y3_ic", "y3_is", "y3_pho", "y3_sc", "y3_wr"],
+			"subjects": ["y3_en", "y3_gp", "y3_ic", "y3_pho", "y3_sc", "y3_wr"],
 			"homeroom": null,
             "workspace": "workspace_4589"
         },
@@ -344,7 +344,7 @@ const data = {
         },
         "2367": {
             "name": "Nairouz Ben Hmida",
-			"subjects": ["y5_en", "y5_gp", "y5_ic", "y5_is", "y5_pho", "y5_sc", "y5_wr"],
+			"subjects": ["y5_en", "y5_gp", "y5_ic", "y5_pho", "y5_sc", "y5_wr"],
 			"homeroom": "y5_hr",
             "workspace": "workspace_2367"
         },
@@ -386,7 +386,7 @@ const data = {
         },
         "3456": {
             "name": "Sana El-Arbi",
-			"subjects": ["y4_en", "y9_en", "y4_gp", "y4_ic", "y4_is", "y4_pho", "y4_sc", "y4_wr"],
+			"subjects": ["y4_en", "y9_en", "y4_gp", "y4_ic", "y4_pho", "y4_sc", "y4_wr"],
 			"homeroom": "y4_hr",
             "workspace": "workspace_3456"
         },
