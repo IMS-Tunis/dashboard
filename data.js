@@ -62,7 +62,7 @@ const data = {
     "y5_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXn-kxJkps5LrDDolAkQGw4BXXQ42nQ0dam1rPhhkfxVsw?e=CdfdGq",
     "y6A_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETxWQ5gUyDRMkAAPXX1mv_8BmF8LnvxqgJHCIgDh2b18CA?e=RtItbU",
     "y6B_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ER8fgUDc_thOj9lcXaYYpnMBS2aNHZWo1-kOnHQpTRkPDQ?e=Yjz361",
-    "y7_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfKHod-hhwdLkhLG2IFY3wIB0ddkeeU7xgHLwdMyhu5jkw?e=u0zui8",
+    "mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfKHod-hhwdLkhLG2IFY3wIB0ddkeeU7xgHLwdMyhu5jkw?e=u0zui8",
     "y8_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXhJdEwCugBCtZT91OzGWoUBPTMd_SXoM-7GcecHOVmgyA?e=rUusg9",
     "y9_mu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EeM30PrFadlOu5tjfUo1W3oBz-ruij4fDYW1houIWo3i1A?e=YBfekv",
     "y10_bu": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ETOIlpxMpfZDjEnx1iyBVvEBR0XY9R_Ic8IyuO__rAgVIA?e=ARDtdl",
@@ -96,7 +96,7 @@ const data = {
     "y5_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EZacxCUWrg1BksLW72k8RIAB3AsH-IkuPTUWGCem__eafQ?e=NkIiJ5",
     "y6A_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EWLG-VdbsdtHvygCEbULKF0B9IQmTRXR8meBE2qqhhiFaA?e=P4QPNq",
     "y6B_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EY0GGkmFYgZHnw8lYmiGJQkBUN4x5jHO3KILWz1vb034YA?e=InHLBv",
-    "y7_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ebm40FYK9WNBi397nzMhw3UB0l8X6xscQtejj-gE6faRsA?e=KuXw8I",
+    "art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ebm40FYK9WNBi397nzMhw3UB0l8X6xscQtejj-gE6faRsA?e=KuXw8I",
     "y8_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ERt7eA_GyCVLhTqMsJLJmg8BTRqUcaAnPBue3ofBt-wlgQ?e=hnqvfC",
     "y9_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EWPyPjeIIspGl8R9dNy7Mo4Bm9-PYIwLFhRewrd0UqZy7A?e=Pid4aK",
     "y3_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EZxDeMyfpnJCouqUwIeiLQ0BlliEIIGHoUvOCX4WwBBiAA?e=kdQh4C",
@@ -221,7 +221,7 @@ const data = {
 		
 		"1890": {
             "name": "Afef Ferchah",
-			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6A_is", "y6B_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is"],
+			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6A_is", "y6B_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is", "y7_ar", "y8_ar", "y9_ar"],
 			"homeroom": null,
             "workspace": "workspace_1890"
         },
@@ -283,7 +283,7 @@ const data = {
         },
         "1357": {
             "name": "Emna Ouhibi",
-			"subjects": ["y4_ar", "y5_ar"],
+			"subjects": ["y4_ar", "y5_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar"],
 			"homeroom": null,
             "workspace": "workspace_1357"
         },
