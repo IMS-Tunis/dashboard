@@ -278,7 +278,7 @@ const data = {
         },
 	 "2837": {
             "name": "Hichem Maroueni",
-			"subjects": ["y6A_pho", "y6B_pho", "y7_pho", "y8_pho", "y9_pho"],
+			"subjects": ["y6A_pho", "y6B_pho", "y7_pho", "y8_pho", "y9_pho","y6A_en","y6B_en"],
 			"homeroom": null,
             "workspace": "workspace_2837"
         },
@@ -387,7 +387,7 @@ const data = {
         "5566": {
             "name": "Salma Ben Azzouz",
 			"subjects": ["y3_ma", "y4_ma", "y5_ma", "y6A_ma"],
-			"homeroom": "c",
+			"homeroom": "y6A_hr",
             "workspace": "workspace_5566"
         },
         "7234": {
