@@ -343,7 +343,7 @@ const data = {
         },
         "3678": {
             "name": "maryem sellini",
-			"subjects": ["y10_fr", "y11_fr", "y3_fr", "y4_fr", "y5_fr", "y6A_fr", "y6B_fr", "y7_fr", "y8_fr", "y9_fr"],
+			"subjects": ["y10_fr", "y11_fr", "y3_fr", "y4_fr", "y5_fr", "y6A_fr", "y6B_fr", "y7_fr", "y8_fr", "y9_fr", "y12_fr"],
 			"homeroom": null,
             "workspace": "workspace_3678"
         },
