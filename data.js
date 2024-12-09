@@ -387,7 +387,7 @@ const data = {
         "5566": {
             "name": "Salma Ben Azzouz",
 			"subjects": ["y3_ma", "y4_ma", "y5_ma", "y6A_ma"],
-			"homeroom": "y6B_hr",
+			"homeroom": "c",
             "workspace": "workspace_5566"
         },
         "7234": {
@@ -431,7 +431,7 @@ const data = {
 	     "7591": {
             "name": "Youssef Torjmane",
 			"subjects": ["y6B_sc", "y6A_sc"],
-			"homeroom": "y6A_hr",
+			"homeroom": "y6B_hr",
             "workspace": "workspace_7591"
         }
     },
