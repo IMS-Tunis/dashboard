@@ -234,7 +234,7 @@ const data = {
 	
         "2789": {
             "name": "Ahlem Bennour",
-			"subjects": ["y6A_fr","y6B_fr","y7_fr","y8_fr","y9_fr"],
+			"subjects": ["y6A_fr","y6B_fr","y7_fr","y8_fr","y9_fr","y3_fr","y4_fr","y5_fr"],
             "workspace": "workspace_2789"
         },
         "3478": {
