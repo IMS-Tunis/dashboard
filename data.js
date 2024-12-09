@@ -430,7 +430,7 @@ const data = {
         },
 	     "7591": {
             "name": "Youssef Torjmane",
-			"subjects": ["y6B_sc", "y6A_sc"],
+			"subjects": ["y6B_sc", "y6A_sc","y9_sc"],
 			"homeroom": "y6B_hr",
             "workspace": "workspace_7591"
         }
