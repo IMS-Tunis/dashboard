@@ -381,7 +381,7 @@ const data = {
         "4567": {
             "name": "Racha Chaabani",
 			"subjects": ["y10_ph", "y11_ph", "y13_ph"],
-			"homeroom": "y10_hr",
+			"homeroom": "y11_hr",
             "workspace": "workspace_4567"
         },
         "5566": {
@@ -393,7 +393,7 @@ const data = {
         "7234": {
             "name": "Salma Djebbi",
 			"subjects": ["y10_bi", "y11_bi", "y12_bi", "y13_bi"],
-			"homeroom": "y11_hr",
+			"homeroom": "y10_hr",
             "workspace": "workspace_7234"
         },
         "3456": {
