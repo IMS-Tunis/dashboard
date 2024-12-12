@@ -315,7 +315,7 @@ const data = {
         "4589": {
             "name": "Ibtihel Arfaoui",
 			"subjects": ["y3_en", "y3_gp", "y3_ic", "y3_pho", "y3_sc", "y3_wr"],
-			"homeroom": null,
+			"homeroom": "y3_hr",
             "workspace": "workspace_4589"
         },
         "3344": {
