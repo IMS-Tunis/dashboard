@@ -276,12 +276,6 @@ const data = {
 			"homeroom": null,
             "workspace": "workspace_1034"
         },
-	 "2837": {
-            "name": "Hichem Maroueni",
-			"subjects": ["y6A_pho", "y6B_pho", "y7_pho", "y8_pho", "y9_pho","y6A_en","y6B_en"],
-			"homeroom": null,
-            "workspace": "workspace_2837"
-        },
         "1357": {
             "name": "Emna Ouhibi",
 			"subjects": ["y4_ar", "y5_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar"],
@@ -326,7 +320,7 @@ const data = {
         },
 	       "5279": {
             "name": "Hichem Maroueni",
-			"subjects": ["y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp","y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp"],
+			"subjects": ["y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp","y6A_pho","y6B_pho","y7_pho","y8_pho","y9_pho"],
 			"homeroom": null,
             "workspace": "workspace_5279"
         },
@@ -368,7 +362,7 @@ const data = {
         },
         "6789": {
             "name": "Nourhane Ghanem",
-			"subjects": ["y3_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar"],
+			"subjects": ["y3_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar","y4_ar","y5_ar"],
 			"homeroom": null,
             "workspace": "workspace_6789"
         },
