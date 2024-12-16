@@ -104,6 +104,7 @@ const data = {
     "y6A_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXp1NAXp4TlFpfrJ4n_FlE0BZOz8t-sEqjvTgckSn85HTg?e=dTkGB6",
     "y6B_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfQ3DP_WwklNhg8TUdy44a8BZErck1MCuqaa9cWjYScOOw?e=4t5OPm",
     "y7_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EdtViNDyS3lElaU2wyCSJ70BZOM_upUFru8qzZBRaEz0vg?e=ER4sHC",
+    "y7_art": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ebm40FYK9WNBi397nzMhw3UB0l8X6xscQtejj-gE6faRsA?e=rPXM1h",
     "y8_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfkG3qS0LC9NmQ7NdXwtL7wBw8vRcqWGTbUsUAmpwzvFpw?e=c8SWNZ",
     "y9_ar": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EecJFTSXGjxPuUWIVLIAp78BJTUZqadIvIxNaubHzq_uVA?e=pKBQzJ",
     "y3_pe": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ET342FMUeTBIgw3g1SDl58sBj5HUyURaU8pQk77YmCzTIQ?e=lybTyI",
