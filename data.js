@@ -324,7 +324,7 @@ const data = {
 	       "5279": {
             "name": "Hichem Maroueni",
 			"subjects": ["y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp","y6A_pho","y6B_pho","y7_pho","y8_pho","y9_pho"],
-			"homeroom": null,
+			"homeroom": "y7_hr",
             "workspace": "workspace_5279"
         },
 	       "8493": {
