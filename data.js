@@ -188,6 +188,8 @@ const data = {
 	"y7_pho": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EY8WE-FE9PxKghvF-nIe0y4BpR19aTuL_7geMbqwQ0FOaA?e=trXGHs",
 	"y8_pho": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQpfPme9H1VHtenE9u831jQBvW_8zQNDIMhgDkwdcH-fPA?e=1BEnZs",
 	"y9_pho": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EcV8ITrId4hJvmNwI8ZEQwYBPu8wpEvOxwzcUbp6UNr1HQ?e=lUCrDs",
+	"y7_re": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ES22pK8Fhi1CsSTHBCDdYBYBOULhYRpEIJofpebEfnzZ1A?e=9TDNrA",
+	"y8_re": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUeUeLJP8zdKv5TidVV_g4oB3xoPHsffaO3_KV4NjW8gHg?e=iHUPQb",
     "y9_wr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXUpNoEwH8dPqx0IUTvad2YBjZhD0cv_mh35mq7B71_E-g?e=n3MKLD"
 },
 
@@ -251,7 +253,7 @@ const data = {
         },
         "1122": {
             "name": "Amina Karoui",
-			"subjects": ["y7_en", "y8_en","y9_en"],
+			"subjects": ["y7_en", "y8_en","y9_en","y7_re","y8_re"],
 			"homeroom": "y9_hr",
             "workspace": "workspace_1122"
         },
