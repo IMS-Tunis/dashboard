@@ -1,8 +1,8 @@
 const data = {
 
 "attendance_links": {
-	"lac3_attendance": "https://www.mytek.tn/siege-de-massage-robotise-jb-100b-noir.html",
-	"charguia_attendance": "https://outlook.office.com/mail/",
+	"lac3_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EYMaVIjCFkhLjal9ILZ1BgYB6jNBnOkDQS0mFYRw55fXQQ?e=oA8Ye4",
+	"charguia_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EZQT1myrWpFIt7lGMjjPnPMBrrFiPmON5scHGgkf8UT3Zw?e=p0S4Db",
     "year_0": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ES4ZPeI6b5tOqvf8jkNwXQABepmM_1Sy9Tnsasiil-DLKw?e=Ga44kR",
     "year_1": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EcxTYGPqxO1Og-3l9-Jo-nQBjLLLiCtsduUCcbZYjC1WRQ?e=CdcfeU",
     "year_2": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EcAG8H51vtVNuqFDk1sR9ucB68rufL9FvTbuWGhRbfnXMw?e=whDGof",
