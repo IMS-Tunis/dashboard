@@ -3,18 +3,18 @@ const data = {
 "attendance_links": {
 	"lac3_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EYMaVIjCFkhLjal9ILZ1BgYB6jNBnOkDQS0mFYRw55fXQQ?e=oA8Ye4",
 	"charguia_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EZQT1myrWpFIt7lGMjjPnPMBrrFiPmON5scHGgkf8UT3Zw?e=p0S4Db",
-       "year_3": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EYwbh7kQ-U1Fl-DanQNg-UwBsSrLgmhXgN6ucDlJgrhqXQ?e=ZD2EBn",
-    "year_4": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQ9r3BoFD_hNg3D2IuttlVMBgZBLLoe2fJftZpV2zjjq-w?e=YAA1hz",
-    "year_5": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Eez_Q18olCRAk0DGVgyIm4kBHh0TnSVaI7aRe89QG7aSHg?e=wq6caO",
-    "year_6.a": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXGNz41ycShMqTCbszzApRsBDkWPW-fX6__DFyhexu5Jyg?e=7NHCKB",
-    "year_6.b": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ET-Qlovu4x1DnsYIJnMP54EBweppcVtI85_RcwL-TrSC7g?e=UwfZkH",
-    "year_7": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ee2KkAbQoTVAivludxAXCj0BlmcLvkwlRIYfWW5Np12R1A?e=idcPlf",
-    "year_8": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EaxZALH4cWNKgqw8iaUfY4QBrQIV3TzAD13nfL7WEPI-TA?e=NdnFZe",
-    "year_9": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUIxjdNgL35Dg6m0Sz7v8KsBNqw3wL0lfjn7O4v1CXuwWg?e=pjbbNE",
-    "year_10": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUDPeZe_cNRGnjPJlMEgfKcBl2K2H771sqjNV3xArAVd5g?e=Vg6M7x",
-    "year_11": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQIHEjsk0_5ImREmbIPZV0ABZm0ItsKxAf8tBUOX-DpxUA?e=wIGJPt",
-    "year_12": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfPleKWuXXpDrfNsbOLXEFkBHQY5XOjEmXq-m0mhAHn_Ew?e=zo06pI",
-    "year_13": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQ9SP0Xg499KrHoHSSTODl8B9vNuZZo-dsYyvDzRJ6oP7w?e=jGWTZE"
+       "y3_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EYwbh7kQ-U1Fl-DanQNg-UwBsSrLgmhXgN6ucDlJgrhqXQ?e=ZD2EBn",
+    "y4_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQ9r3BoFD_hNg3D2IuttlVMBgZBLLoe2fJftZpV2zjjq-w?e=YAA1hz",
+    "y5_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Eez_Q18olCRAk0DGVgyIm4kBHh0TnSVaI7aRe89QG7aSHg?e=wq6caO",
+    "y6.A_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EXGNz41ycShMqTCbszzApRsBDkWPW-fX6__DFyhexu5Jyg?e=7NHCKB",
+    "y6.B_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ET-Qlovu4x1DnsYIJnMP54EBweppcVtI85_RcwL-TrSC7g?e=UwfZkH",
+    "y7_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ee2KkAbQoTVAivludxAXCj0BlmcLvkwlRIYfWW5Np12R1A?e=idcPlf",
+    "y8_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EaxZALH4cWNKgqw8iaUfY4QBrQIV3TzAD13nfL7WEPI-TA?e=NdnFZe",
+    "y9_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUIxjdNgL35Dg6m0Sz7v8KsBNqw3wL0lfjn7O4v1CXuwWg?e=pjbbNE",
+    "y10_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EUDPeZe_cNRGnjPJlMEgfKcBl2K2H771sqjNV3xArAVd5g?e=Vg6M7x",
+    "y11_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQIHEjsk0_5ImREmbIPZV0ABZm0ItsKxAf8tBUOX-DpxUA?e=wIGJPt",
+    "y12_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EfPleKWuXXpDrfNsbOLXEFkBHQY5XOjEmXq-m0mhAHn_Ew?e=zo06pI",
+    "y13_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EQ9SP0Xg499KrHoHSSTODl8B9vNuZZo-dsYyvDzRJ6oP7w?e=jGWTZE"
 },
 
 "subjects_links": {
