@@ -2,7 +2,7 @@ const data = {
 
 "attendance_links": {
 	"lac3_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EX3Si4m2Pz5AswyaaGrF85gBvYiWlPcbVmvipDzvq84AfQ?e=TdByfh",
-	"charguia_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EZQT1myrWpFIt7lGMjjPnPMBrrFiPmON5scHGgkf8UT3Zw?e=p0S4Db"
+	"charguia_attendance": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/ET0-nEiCIEFJuNFXjo3ZzCkB43-k-v-EgqXHuZY1Cvg54g?e=BD1JiF"
 },
 
 "subjects_links": {
