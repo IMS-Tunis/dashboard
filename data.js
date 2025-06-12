@@ -194,7 +194,7 @@ const data = {
     "y10_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ef6UEcydUd5Mnb3W2cWd24wBah2-HLsjLz9NMS8MoqpH7Q?e=eppTEE",
     "y11_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EShJTHiq3V1BrUCl4_Rpm_kB8ehdsONtvvK68Yrt9pVPhQ?e=HWCZaE",
 	"y12_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ed1viGvpNqJHjJ00dg0rLv0Bn73JJ7MmHDjsxesq41Wyag?e=7e7YT8",
-	"y13_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/Ed1viGvpNqJHjJ00dg0rLv0Bn73JJ7MmHDjsxesq41Wyag?e=7e7YT8"
+	"y13_hr": "https://turkiyemaarif-my.sharepoint.com/:x:/g/personal/admin_tn_maarifschools_org/EbMQbL_8n7xOsbwgOj0WLJMBB_DzJM0Atk1sN-1EVHgD4w?e=lvnUYe"
 
 
 },
