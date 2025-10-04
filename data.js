@@ -237,9 +237,13 @@ const data = {
             "workspace": "workspace_2789"
         },
         "3478": {
-            "name": "Ahmet Ali Evlice",
-			"subjects": ["y10_tu", "y11_tu", "y12_tu", "y13_tu", "y3_tu", "y4_tu", "y5_tu", "y6A_tu", "y6B_tu", "y7_tu", "y8_tu", "y9_tu"],
+            "name": "Mert Belli",
+			"subjects": ["y10_tu", "y11_tu", "y12_tu", "y13_tu", "y3_tu", "y4_tu", "y5_tu", "y6_tu", "y7_tu", "y8_tu", "y9_tu"],
 			"homeroom": null,
+            "workspace": "workspace_3478"
+        },
+	      "8493": {
+            "name": "Seyma Yarasir",
             "workspace": "workspace_3478"
         },
         "8123": {
@@ -372,8 +376,8 @@ const data = {
         },
         "4567": {
             "name": "Racha Chaabani",
-			"subjects": ["y10_ph", "y11_ph", "y13_ph"],
-			"homeroom": "y11_hr",
+			"subjects": ["y7_sc", "y8_sc"],
+			"homeroom": null,
             "workspace": "workspace_4567"
         },
         "5566": {
