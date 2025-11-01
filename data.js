@@ -198,6 +198,7 @@ const data = {
 
 				"9128": {
             "name": "Wiem Laarafa",
+             "subjects": ["y3_sc","y3_ma","y3_en","y3_his","y3_geo"],
             "workspace": "workspace_9128"
         },
 
