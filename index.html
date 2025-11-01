@@ -321,7 +321,7 @@
             position: relative;
         }
 
-        select, input[type="text"] {
+        select {
             width: 100%;
             padding: 14px 16px;
             border: 1px solid #e1e8ed;
@@ -347,8 +347,6 @@
             transition: all 0.3s ease;
             background-color: #f8fafc;
             color: var(--text-dark);
-            -webkit-text-security: disc;
-            text-security: disc;
         }
 
         .dark-mode .password-input {
@@ -381,20 +379,20 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        .dark-mode select, .dark-mode input[type="text"] {
+        .dark-mode select {
             background-color: #2d3748;
             border-color: #4a5568;
             color: var(--text-dark);
         }
 
-        select:focus, input[type="text"]:focus, .password-input:focus {
+        select:focus, .password-input:focus {
             outline: none;
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(0, 163, 180, 0.2);
             background-color: white;
         }
 
-        .dark-mode select:focus, .dark-mode input[type="text"]:focus, .dark-mode .password-input:focus {
+        .dark-mode select:focus, .dark-mode .password-input:focus {
             background-color: #374151;
         }
 
@@ -809,7 +807,7 @@
                     <p class="card-description">Weekly reports will be automatically sent to administrators and department heads.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="weekly-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="weekly-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('weekly-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -838,7 +836,7 @@
                     <p class="card-description">Each teacher can access and submit grades for their subjects through this portal.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="report-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="report-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('report-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -862,7 +860,7 @@
                     <p class="card-description">Homeroom teachers can access report cards for verification before printing and distribution.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="report-card-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="report-card-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('report-card-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -886,7 +884,7 @@
                     <p class="card-description">Access the most up-to-date student lists for all classes and sections.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="student-list-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="student-list-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('student-list-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -910,7 +908,7 @@
                     <p class="card-description">Admin officers are responsible for maintaining the school database up-to-date with current student and staff information.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="database-passcode" class="password-input" placeholder="Enter your passcode">
+                            <input type="password" id="database-passcode" class="password-input" placeholder="Enter your passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('database-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -934,7 +932,7 @@
                     <p class="card-description">Teachers can access their workspaces and submit their pedagogic resources, lesson plans, and teaching materials.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="workspace-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="workspace-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('workspace-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -958,7 +956,7 @@
                     <p class="card-description">Access and manage disciplinary records for students across both campuses.</p>
                     <div class="form-group">
                         <div class="password-container">
-                            <input type="text" id="disciplinary-passcode" class="password-input" placeholder="Enter Passcode">
+                            <input type="password" id="disciplinary-passcode" class="password-input" placeholder="Enter Passcode">
                             <button type="button" class="toggle-password" onclick="togglePasswordVisibility('disciplinary-passcode')">
                                 <i class="fas fa-eye"></i>
                             </button>
@@ -1040,24 +1038,22 @@
             }
         });
 
-        // Password visibility toggle function
+        // Password visibility toggle function - FIXED VERSION
         function togglePasswordVisibility(inputId) {
             const passwordInput = document.getElementById(inputId);
             const toggleButton = passwordInput.nextElementSibling;
             const icon = toggleButton.querySelector('i');
             
-            if (passwordInput.type === 'text') {
+            if (passwordInput.type === 'password') {
+                // Show password
                 passwordInput.type = 'text';
-                passwordInput.style.webkitTextSecurity = 'disc';
-                passwordInput.style.textSecurity = 'disc';
-                icon.classList.remove('fa-eye-slash');
-                icon.classList.add('fa-eye');
-            } else {
-                passwordInput.type = 'text';
-                passwordInput.style.webkitTextSecurity = 'none';
-                passwordInput.style.textSecurity = 'none';
                 icon.classList.remove('fa-eye');
                 icon.classList.add('fa-eye-slash');
+            } else {
+                // Hide password
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
             }
         }
 
