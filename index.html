@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMST Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #153F71;
+            --secondary: #00A3B4;
+            --accent-red: #E5362B;
+            --accent-yellow: #D2C520;
+            --light-bg: #f0f7fa;
+            --card-bg: #ffffff;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+        }
+
+        .dark-mode {
+            --primary: #1e4a8a;
+            --secondary: #008a9b;
+            --accent-red: #d63025;
+            --accent-yellow: #c9b71e;
+            --light-bg: #121f2f;
+            --card-bg: #1e2a3a;
+            --text-dark: #e2e8f0;
+            --text-light: #94a3b8;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a4a8a 100%);
+            color: white;
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(21, 63, 113, 0.3);
+            position: relative;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo-left, .logo-right {
+            height: 60px;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin: 0;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #ffffff, var(--accent-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent-yellow), var(--secondary));
+            border-radius: 3px;
+        }
+
+        .accent-text {
+            color: var(--accent-yellow);
+            font-weight: 800;
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px 5%;
+            background: rgba(21, 63, 113, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            gap: 15px;
+        }
+
+        .dark-mode .dark-mode-container {
+            background: rgba(30, 41, 59, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-mode-label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .dark-mode .dark-mode-label {
+            color: var(--text-dark);
+        }
+
+        .dark-mode-toggle {
+            background: rgba(21, 63, 113, 0.1);
+            border: 1px solid rgba(21, 63, 113, 0.2);
+            border-radius: 50px;
+            width: 70px;
+            height: 35px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .dark-mode .dark-mode-toggle {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .toggle-circle {
+            width: 25px;
+            height: 25px;
+            background: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translateX(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode .toggle-circle {
+            transform: translateX(35px);
+            background: var(--accent-yellow);
+        }
+
+        .dark-mode-toggle i {
+            position: absolute;
+            color: var(--primary);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode .dark-mode-toggle i {
+            color: var(--text-dark);
+        }
+
+        .dark-mode-toggle .fa-sun {
+            left: 10px;
+        }
+
+        .dark-mode-toggle .fa-moon {
+            right: 10px;
+        }
+
+        /* Main Content */
+        .dashboard-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        /* Card Styles */
+        .dashboard-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--secondary);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dashboard-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .dark-mode .dashboard-card:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        }
+
+        .dashboard-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0, 163, 180, 0.3);
+        }
+
+        /* Report Cards Icon - RED */
+        .report-cards-icon .card-icon {
+            background: linear-gradient(135deg, var(--accent-red), #f05d5d);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0;
+        }
+
+        .dark-mode .card-title {
+            color: var(--text-dark);
+        }
+
+        .card-content {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .card-description {
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        select, input[type="text"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #e1e8ed;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+            color: var(--text-dark);
+        }
+
+        .dark-mode select, .dark-mode input[type="text"] {
+            background-color: #2d3748;
+            border-color: #4a5568;
+            color: var(--text-dark);
+        }
+
+        select:focus, input[type="text"]:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(0, 163, 180, 0.2);
+            background-color: white;
+        }
+
+        .dark-mode select:focus, .dark-mode input[type="text"]:focus {
+            background-color: #374151;
+        }
+
+        /* Button Styles - DARK BLUE */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--primary) 0%, #1a4a8a 100%);
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(21, 63, 113, 0.3);
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #1a4a8a 0%, var(--primary) 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(21, 63, 113, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, #00b8cc 100%);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #00b8cc 0%, var(--secondary) 100%);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-group .btn {
+            flex: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .dashboard-card {
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .dashboard-card:nth-child(1) { animation-delay: 0.1s; }
+        .dashboard-card:nth-child(2) { animation-delay: 0.2s; }
+        .dashboard-card:nth-child(3) { animation-delay: 0.3s; }
+        .dashboard-card:nth-child(4) { animation-delay: 0.4s; }
+        .dashboard-card:nth-child(5) { animation-delay: 0.5s; }
+        .dashboard-card:nth-child(6) { animation-delay: 0.6s; }
+        .dashboard-card:nth-child(7) { animation-delay: 0.7s; }
+        .dashboard-card:nth-child(8) { animation-delay: 0.8s; }
+        .dashboard-card:nth-child(9) { animation-delay: 0.9s; }
+
+        /* Status Indicators */
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #4CAF50;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 15px 5%;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .logo-container {
+                justify-content: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+
+        /* Special Card Styles */
+        .card-highlight {
+            border-left-color: var(--accent-yellow);
+        }
+
+        .card-highlight .card-icon {
+            background: linear-gradient(135deg, var(--accent-yellow), #e6d43a);
+        }
+
+        .card-urgent {
+            border-left-color: var(--accent-red);
+        }
+
+        .card-urgent .card-icon {
+            background: linear-gradient(135deg, var(--accent-red), #f05d5d);
+        }
+
+        /* Technical Support Card - CENTERED AND COMPACT */
+        .support-section {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .support-card {
+            background: linear-gradient(135deg, rgba(229, 54, 43, 0.05) 0%, rgba(229, 54, 43, 0.1) 100%);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 25px 30px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--accent-red);
+            width: 90%;
+            max-width: 900px;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .dark-mode .support-card {
+            background: linear-gradient(135deg, rgba(229, 54, 43, 0.1) 0%, rgba(229, 54, 43, 0.2) 100%);
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-yellow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .support-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .support-header {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .support-icon-main {
+            font-size: 2.5rem;
+            color: var(--accent-red);
+            margin-bottom: 10px;
+        }
+
+        .support-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-red);
+            margin-bottom: 8px;
+        }
+
+        .support-subtitle {
+            font-size: 1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .support-options {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .support-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            width: 45%;
+            max-width: 300px;
+        }
+
+        .support-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .support-option.urgent {
+            background: rgba(229, 54, 43, 0.1);
+            border: 1px solid rgba(229, 54, 43, 0.3);
+        }
+
+        .dark-mode .support-option.urgent {
+            background: rgba(229, 54, 43, 0.2);
+        }
+
+        .support-option.normal {
+            background: rgba(210, 197, 32, 0.1);
+            border: 1px solid rgba(210, 197, 32, 0.3);
+        }
+
+        .dark-mode .support-option.normal {
+            background: rgba(210, 197, 32, 0.2);
+        }
+
+        .support-option-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .support-option.urgent .support-option-icon {
+            color: var(--accent-red);
+        }
+
+        .support-option.normal .support-option-icon {
+            color: var(--accent-yellow);
+        }
+
+        .support-option-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+
+        .support-option-details {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .support-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .support-option.urgent .support-link {
+            background: var(--accent-red);
+            color: white;
+        }
+
+        .support-option.normal .support-link {
+            background: var(--accent-yellow);
+            color: #333;
+        }
+
+        .support-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .support-options {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .support-option {
+                width: 100%;
+                max-width: 350px;
+            }
+            
+            .support-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="vectmaarif.png" alt="Logo" class="logo-left">
+            </div>
+            <div class="header-center">
+                <h1>IMST DASHBOARD 2025-2026</h1>
+            </div>
+            <div class="logo-container">
+                <img src="vectcambridge.png" alt="Logo" class="logo-right">
+            </div>
+        </div>
+    </header>
+
+    <!-- Dark Mode Toggle Container -->
+    <div class="dark-mode-container">
+        <span class="dark-mode-label">Dark Mode</span>
+        <button class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <span class="toggle-circle"></span>
+        </button>
+    </div>
+
+    <div class="dashboard-container">
+        <div class="dashboard-grid">
+            <!-- Attendance Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h2 class="card-title">Attendance</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Teachers are responsible for taking attendance at the end of the first session in <strong>Attendance register</strong> sheet. Nurses will call parents to report absences.</p>
+                    <div class="form-group">
+                        <select id="attendance-year">
+                            <option value="">Select School</option>
+                            <option value="lac3_attendance">Lac 3</option>
+                            <option value="charguia_attendance">Charguia</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="accessAttendance()">
+                        <i class="fas fa-sign-in-alt"></i> Access Attendance
+                    </button>
+                </div>
+            </div>
+
+            <!-- Weekly Reports Card -->
+            <div class="dashboard-card card-highlight">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h2 class="card-title">Weekly Reports</h2>
+                </div>
+                <div class="card-content">
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        sent every Friday at 17:00
+                    </div>
+                    <p class="card-description">Weekly reports will be automatically sent to administrators and department heads.</p>
+                    <div class="form-group">
+                        <input type="text" id="weekly-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary" onclick="validateAndOpenReport('lac')">
+                            <i class="fas fa-school"></i> LAC Reports
+                        </button>
+                        <button class="btn btn-secondary" onclick="validateAndOpenReport('charguia')">
+                            <i class="fas fa-school"></i> Charguia Reports
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grade Submission Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2 class="card-title">Grade Submission</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Each teacher can access and submit grades for their subjects through this portal.</p>
+                    <div class="form-group">
+                        <input type="text" id="report-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <button class="btn" onclick="accessGradeSubmission()">
+                        <i class="fas fa-upload"></i> Access Grade Submission
+                    </button>
+                </div>
+            </div>
+
+            <!-- Report Cards Card - WITH RED ICON -->
+            <div class="dashboard-card report-cards-icon">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h2 class="card-title">Report Cards</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Homeroom teachers can access report cards for verification before printing and distribution.</p>
+                    <div class="form-group">
+                        <input type="text" id="report-card-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <button class="btn" onclick="validateReportCardPasscode()">
+                        <i class="fas fa-print"></i> Access Report Cards
+                    </button>
+                </div>
+            </div>
+
+            <!-- Student Lists Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2 class="card-title">Student Lists</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Access the most up-to-date student lists for all classes and sections.</p>
+                    <div class="form-group">
+                        <input type="text" id="student-list-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <button class="btn" onclick="validateStudentListPasscode()">
+                        <i class="fas fa-list"></i> Access Student List
+                    </button>
+                </div>
+            </div>
+
+            <!-- School Database Card -->
+            <div class="dashboard-card card-highlight">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h2 class="card-title">School Database</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Admin officers are responsible for maintaining the school database up-to-date with current student and staff information.</p>
+                    <div class="form-group">
+                        <input type="text" id="database-passcode" placeholder="Enter your passcode">
+                    </div>
+                    <button class="btn" onclick="accessDatabase()">
+                        <i class="fas fa-server"></i> Access Database
+                    </button>
+                </div>
+            </div>
+
+            <!-- Workspace Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h2 class="card-title">Access Workspace</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Teachers can access their workspaces and submit their pedagogic resources, lesson plans, and teaching materials.</p>
+                    <div class="form-group">
+                        <input type="text" id="workspace-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <button class="btn" onclick="accessWorkspace()">
+                        <i class="fas fa-folder-open"></i> Access Workspace
+                    </button>
+                </div>
+            </div>
+
+            <!-- Disciplinary Actions Card -->
+            <div class="dashboard-card card-urgent">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h2 class="card-title">Disciplinary Actions</h2>
+                </div>
+                <div class="card-content">
+                    <p class="card-description">Access and manage disciplinary records for students across both campuses.</p>
+                    <div class="form-group">
+                        <input type="text" id="disciplinary-passcode" placeholder="Enter Passcode">
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn" onclick="openDisciplinaryLink('lac')">
+                            <i class="fas fa-exclamation-triangle"></i> LAC Records
+                        </button>
+                        <button class="btn" onclick="openDisciplinaryLink('charguia')">
+                            <i class="fas fa-exclamation-triangle"></i> Charguia Records
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Support Card - CENTERED AND COMPACT -->
+        <div class="support-section">
+            <div class="support-card">
+                <div class="support-header">
+                    <div class="support-icon-main">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h2 class="support-title">Technical Support</h2>
+                    <p class="support-subtitle">Contact us for any technical issues with the dashboard</p>
+                </div>
+                <div class="support-options">
+                    <div class="support-option normal">
+                        <div class="support-option-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="support-option-title">Email Support</h3>
+                        <p class="support-option-details">For general technical issues</p>
+                        <a href="mailto:chams-eddine.hemdani@tn.maarifschools.org" class="support-link">
+                            <i class="fas fa-paper-plane"></i> Send Email
+                        </a>
+                    </div>
+                    <div class="support-option urgent">
+                        <div class="support-option-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="support-option-title">Urgent WhatsApp</h3>
+                        <p class="support-option-details">For critical issues requiring immediate attention</p>
+                        <a href="https://wa.me/21626311793" target="_blank" class="support-link">
+                            <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Note: Admin staff have a supercode to access everything in this platform.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference or respect OS preference
+        if (localStorage.getItem('darkMode') === 'enabled' || 
+            (window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('darkMode'))) {
+            body.classList.add('dark-mode');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            // Save user preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+
+        // Interactive animations and functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('.btn, .support-link');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    // Remove any existing ripple
+                    const existingRipple = this.querySelector('.ripple');
+                    if (existingRipple) {
+                        existingRipple.remove();
+                    }
+                    
+                    // Create new ripple
+                    const ripple = document.createElement('span');
+                    ripple.classList.add('ripple');
+                    this.appendChild(ripple);
+                    
+                    // Get click position
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    // Set ripple position and size
+                    ripple.style.width = ripple.style.height = size + 'px';
+                    ripple.style.left = x + 'px';
+                    ripple.style.top = y + 'px';
+                    
+                    // Remove ripple after animation
+                    setTimeout(() => {
+                        ripple.remove();
+                    }, 600);
+                });
+            });
+            
+            // Add focus animation to form elements
+            const formElements = document.querySelectorAll('input, select');
+            formElements.forEach(element => {
+                element.addEventListener('focus', function() {
+                    this.parentElement.classList.add('focused');
+                });
+                
+                element.addEventListener('blur', function() {
+                    this.parentElement.classList.remove('focused');
+                });
+            });
+        });
+        
+        // Add ripple effect styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.7);
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .focused {
+                transform: translateY(-2px);
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Placeholder functions for button actions
+        function accessAttendance() {
+            alert('Accessing Attendance System...');
+        }
+        
+        function validateAndOpenReport(school) {
+            alert(`Opening Weekly Reports for ${school.toUpperCase()}...`);
+        }
+        
+        function accessGradeSubmission() {
+            alert('Accessing Grade Submission System...');
+        }
+        
+        function validateReportCardPasscode() {
+            alert('Accessing Report Cards...');
+        }
+        
+        function validateStudentListPasscode() {
+            alert('Accessing Student Lists...');
+        }
+        
+        function accessDatabase() {
+            alert('Accessing School Database...');
+        }
+        
+        function accessWorkspace() {
+            alert('Accessing Workspace...');
+        }
+        
+        function openDisciplinaryLink(school) {
+            alert(`Accessing Disciplinary Records for ${school.toUpperCase()}...`);
+        }
+    </script>
+</body>
+</html>
