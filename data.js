@@ -207,14 +207,14 @@ const data = {
 		
 		"1890": {
             "name": "Afef Ferchah",
-			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6A_is", "y6B_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is", "y7_ar", "y8_ar", "y9_ar"],
+			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is"],
 			"homeroom": null,
             "workspace": "workspace_1890"
         },
 
 				"9128": {
             "name": "Wiem Laarafa",
-             "subjects": ["y3_sc","y3_ma","y3_en","y3_his","y3_geo"],
+             "subjects": ["y3_sc","y3_ma","y3_en","y3_his","y3_geo","y3_literacy"],
             "workspace": "workspace_9128"
         },
 
@@ -227,7 +227,7 @@ const data = {
 	
         "2789": {
             "name": "Ahlem Bennour",
-			"subjects": ["y6A_fr","y6B_fr","y7_fr","y8_fr","y9_fr","y3_fr","y4_fr","y5_fr"],
+			"subjects": ["y7_fr","y8_fr","y9_fr","y3_fr","y4_fr","y5_fr","y6_fr"],
             "workspace": "workspace_2789"
         },
         "3478": {
@@ -272,12 +272,7 @@ const data = {
 			"homeroom": null,
             "workspace": "workspace_1034"
         },
-        "1357": {
-            "name": "Emna Ouhibi",
-			"subjects": ["y4_ar", "y5_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar"],
-			"homeroom": null,
-            "workspace": "workspace_1357"
-        },
+
         "7618": {
             "name": "ghada jemaa",
 			"subjects": ["y10_en", "y11_en", "y12_en", "y13_en", "y12_gp"],
@@ -292,7 +287,7 @@ const data = {
         },
         "8517": {
             "name": "Hazem Ben Sedka",
-			"subjects": ["y10_mu", "y11_mu", "y12_mu", "y13_mu", "y3_mu", "y4_mu", "y5_mu", "y6A_mu", "y6B_mu", "y7_mu", "y8_mu", "y9_mu"],
+			"subjects": ["y10_mu", "y11_mu", "y12_mu", "y13_mu", "y3_mu", "y4_mu", "y5_mu", "y6_mu", "y7_mu", "y8_mu", "y9_mu"],
 			"homeroom": null,
             "workspace": "workspace_8517"
         },
@@ -316,13 +311,19 @@ const data = {
         },
 	       "5279": {
             "name": "Hichem Maroueni",
-			"subjects": ["y6A_en", "y6B_en","y7_gp","y8_gp","y9_gp","y6A_his","y6B_his","y7_his","y8_his","y9_his","y6A_gp","y6B_gp"],
+			"subjects": ["y6_en", "y9_en","y7_his","y8_his","y7_geo","y8_geo"],
 			"homeroom": "y7_hr",
             "workspace": "workspace_5279"
         },
-	       "8493": {
-            "name": "Rahma El Amri",
-			"subjects": ["y7_sc", "y8_sc", "y9_sc"],
+	      "8096": {
+            "name": "Wided Mira",
+			"subjects": ["y7_en", "y8_en","y6_his","y9_his","y6_geo","y9_geo"],
+			"homeroom": "y7_hr",
+            "workspace": "workspace_5279"
+        },
+	       "4595": {
+            "name": "Rahma Ben Brahim",
+			"subjects": ["y3_wb","y4_wb","y5_wb","y6_wb","y7_wb","y8_wb","y9_wb"],
 			"homeroom": null,
             "workspace": "workspace_8493"
         },
@@ -334,7 +335,7 @@ const data = {
         },
         "3678": {
             "name": "maryem sellini",
-			"subjects": ["y10_fr", "y11_fr", "y3_fr", "y4_fr", "y5_fr", "y6A_fr", "y6B_fr", "y7_fr", "y8_fr", "y9_fr", "y12_fr"],
+			"subjects": ["y10_fr", "y11_fr", "y12_fr" "y6_fr",  "y7_fr", "y8_fr", "y9_fr"],
 			"homeroom": null,
             "workspace": "workspace_3678"
         },
@@ -346,25 +347,25 @@ const data = {
         },
         "2367": {
             "name": "Nairouz Ben Hmida",
-			"subjects": ["y5_en", "y5_gp", "y5_ic", "y5_pho", "y5_sc", "y5_wr"],
+			"subjects": ["y5_en", "y5_sc", "y5_literacy", "y5_his", "y5_geo"],
 			"homeroom": "y5_hr",
             "workspace": "workspace_2367"
         },
         "9012": {
             "name": "Nebil Belhaj",
-			"subjects": ["y3_art", "y4_art", "y5_art", "y6A_art", "y6B_art", "y7_art", "y8_art", "y9_art"],
+			"subjects": ["y3_art", "y4_art", "y5_art", "y6_art", "y7_art", "y8_art", "y9_art"],
 			"homeroom": null,
             "workspace": "workspace_9012"
         },
         "6789": {
             "name": "Nourhane Ghanem",
-			"subjects": ["y3_ar", "y6A_ar", "y6B_ar", "y7_ar", "y8_ar", "y9_ar","y4_ar","y5_ar"],
+			"subjects": ["y3_ar", "y6_ar", "y7_ar", "y8_ar", "y9_ar","y4_ar","y5_ar"],
 			"homeroom": null,
             "workspace": "workspace_6789"
         },
         "7890": {
             "name": "Noussaier Benamor",
-			"subjects": ["y3_pe", "y4_pe", "y5_pe", "y6A_pe", "y6B_pe", "y7_pe", "y8_pe", "y9_pe"],
+			"subjects": ["y3_pe", "y4_pe", "y5_pe", "y6_pe", "y7_pe", "y8_pe", "y9_pe"],
 			"homeroom": null,
             "workspace": "workspace_7890"
         },
@@ -388,13 +389,13 @@ const data = {
         },
         "3456": {
             "name": "Sana El-Arbi",
-			"subjects": ["y4_en", "y9_en", "y4_gp", "y4_ic", "y4_pho", "y4_sc", "y4_wr"],
+			"subjects": ["y4_en", "y4_sc", "y4_literacy", "y4_his", "y4_geo"],
 			"homeroom": "y4_hr",
             "workspace": "workspace_3456"
         },
         "2468": {
             "name": "Sana Mzoughi",
-			"subjects": ["y6A_co", "y6B_co", "y7_co", "y8_co", "y9_co", "y10_cs", "y11_cs", "y6A_ic", "y6B_ic", "y7_ic", "y8_ic", "y9_ic"],
+			"subjects": ["y3_co","y4_co","y5_co","y6_co", "y7_co", "y8_co", "y9_co", "y11_cs",  "y3_cs", "y4_cs","y5_cs", "y6_cs", "y7_cs", "y8_cs", "y9_cs"],
 			"homeroom": null,
             "workspace": "workspace_2468"
         },
@@ -418,13 +419,13 @@ const data = {
         },
         "9228": {
             "name": "Zeyneb Fajraoui",
-			"subjects": ["y6B_ma", "y7_ma", "y8_ma", "y9_ma"],
+			"subjects": ["y7_ma", "y8_ma", "y9_m"],
 			"homeroom": "y8_hr",
             "workspace": "workspace_9228"
         },
 	     "7591": {
             "name": "Youssef Torjmane",
-			"subjects": ["y6B_sc", "y6A_sc","y9_sc"],
+			"subjects": ["y6_sc","y9_sc"],
 			"homeroom": "y6B_hr",
             "workspace": "workspace_7591"
         }
