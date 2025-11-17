@@ -482,6 +482,7 @@ const data = {
 	"workspace_2837": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EkfBSujm9FdGj7bUS2YR94IBYUKnNo83dck25R9N36VVOA?e=J50TOs",
         "workspace_9228": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsvGhYUrlXpFoK6dFyKJKxUBK-puNd4az6t6Dn9TAoFm8A?e=bDKZ4Y",
 	"workspace_9901": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EsjNNK6HiiNIvIxIHQPEnE4BHnA1K4c_1hKG4zh-QU6GhA?e=7EYPhh",
+	"workspace_2080": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/EpKHFEZe3-FFmMYM5OHJpbwBgeA4it6Zj3f28-rmekFheA?e=Zuz80h",
 	"workspace_7193": "https://turkiyemaarif-my.sharepoint.com/:f:/g/personal/admin_tn_maarifschools_org/Ev-Fdne8WClIjsLzfQIYmxQBwGIMKmWJ55MaFTlo4Mp0PA?e=UTlauy"
    },
 };
