@@ -203,7 +203,21 @@ const data = {
             "name": "Officer 1", 
             "role": "admin_officer" 
         },
-		
+
+			"1011": {
+            "name": "Rahma Ben Ibrahim",
+			"subjects": ["y9_wb", "y8_wb", "y7_wb", "y6_wb", "y5_wb", "y4_wb", "y3_wb"],
+			"homeroom": null,
+            "workspace": ""
+        },
+
+				"2080": {
+            "name": "Nedia Touati",
+			"subjects": ["y9_ar", "y8_ar", "y7_ar", "y6_ar", "y5_ar", "y4_ar", "y3_ar"],
+			"homeroom": null,
+            "workspace": ""
+        },
+	
 		"1890": {
             "name": "Afef Ferchah",
 			"subjects": ["y10_is", "y11_is", "y12_is", "y13_is", "y6_is", "y7_is", "y8_is", "y9_is" , "y5_is" , "y4_is", "y3_is"],
@@ -319,12 +333,6 @@ const data = {
 			"subjects": ["y7_en", "y8_en","y6_his","y9_his","y6_geo","y9_geo"],
 			"homeroom": "y7_hr",
             "workspace": "workspace_8096"
-        },
-	       "4595": {
-            "name": "Rahma Ben Brahim",
-			"subjects": ["y3_wb","y4_wb","y5_wb","y6_wb","y7_wb","y8_wb","y9_wb"],
-			"homeroom": null,
-            "workspace": "workspace_8493"
         },
         "5690": {
             "name": "Manel Touihri",
