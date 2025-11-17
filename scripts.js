@@ -63,36 +63,64 @@ function openWeeklyReport(reportType) {
 
 
 // Function to handle Grade Submission (Frame 3)
-// Function to handle Grade Submission (Frame 3)
 function accessGradeSubmission() {
-    const passcode = document.getElementById('report-passcode').value;
+    const passcode = document.getElementById('report-passcode').value.trim();
 
     if (passcode === "ad24min") {
-        // Admin passcode: Display all subject links
-        const allSubjects = Object.keys(data.subjects_links);
-        const results = allSubjects.map(subject => 
-            `<tr>
-                <td>${subject}</td>
-                <td><a href="${data.subjects_links[subject]}" target="_blank">Click to Access</a></td>
-            </tr>`).join("");
+        // Admin sees all subjects
+        const allKeys = Object.keys(data.subjects_links);
+
+        const results = allKeys.map(key => {
+            const label = key.trim(); // clean label for display
+            const link = (data.subjects_links[key] || "").trim();
+
+            return `
+                <tr>
+                    <td>${label}</td>
+                    <td><a href="${link}" target="_blank">Click to Access</a></td>
+                </tr>`;
+        }).join("");
 
         localStorage.setItem('gradeResults', results);
         window.location.href = 'gradeSubmissionResults.html';
-    } else if (data.passcodes[passcode]) {
-        // Regular teacher: Display their assigned subjects
+
+    } else if (data.passcodes[passcode] && Array.isArray(data.passcodes[passcode].subjects)) {
+        // Teacher sees only their subjects
         const teacherSubjects = data.passcodes[passcode].subjects;
-        const results = teacherSubjects.map(subject => 
-            `<tr>
-                <td>${subject}</td>
-                <td><a href="${data.subjects_links[subject]}" target="_blank">Click to Access</a></td>
-            </tr>`).join("");
-        
+        const allKeys = Object.keys(data.subjects_links);
+
+        const results = teacherSubjects.map(subjectCode => {
+            const normalized = subjectCode.trim();
+
+            // find matching key in subjects_links, ignoring extra spaces
+            const matchedKey = allKeys.find(k => k.trim() === normalized);
+            const link = matchedKey ? (data.subjects_links[matchedKey] || "").trim() : null;
+
+            if (!link) {
+                // in case a subject is not configured
+                return `
+                    <tr>
+                        <td>${normalized}</td>
+                        <td style="color:red;">Link not configured</td>
+                    </tr>`;
+            }
+
+            return `
+                <tr>
+                    <td>${normalized}</td>
+                    <td><a href="${link}" target="_blank">Click to Access</a></td>
+                </tr>`;
+        }).join("");
+
         localStorage.setItem('gradeResults', results);
         window.location.href = 'gradeSubmissionResults.html';
+
     } else {
         alert("Invalid passcode. Please try again.");
     }
 }
+
+
 
 // Function to handle Report Cards (Frame 4)
 function validateReportCardPasscode() {
@@ -219,5 +247,6 @@ function openDisciplinaryLink(location) {
         alert("Incorrect passcode.");
     }
 }
+
 
 
