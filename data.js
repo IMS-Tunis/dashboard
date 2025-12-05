@@ -257,15 +257,9 @@ const data = {
             "name": "amani daoud",
             "workspace": "workspace_8123"
         },
-        "1122": {
-            "name": "Amina Karoui",
-			"subjects": ["y7_en", "y8_en","y9_en","y7_re","y8_re"],
-			"homeroom": "y9_hr",
-            "workspace": "workspace_1122"
-        },
         "2345": {
             "name": "Amir Jaouani",
-			"subjects": ["y12_ph"],
+			"subjects": ["y10_ph","y11_ph","y13_ph","y12_ph"],
 			"homeroom": "y10_hr",
             "workspace": "workspace_2345"
         },
