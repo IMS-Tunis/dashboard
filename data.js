@@ -319,13 +319,13 @@ const data = {
 	       "5279": {
             "name": "Hichem Maroueni",
 			"subjects": ["y6_en", "y9_en","y7_his","y8_his","y7_geo","y8_geo"],
-			"homeroom": "y7_hr",
+			"homeroom": null,
             "workspace": "workspace_5279"
         },
 	      "8096": {
             "name": "Wided Mira",
 			"subjects": ["y7_en", "y8_en","y6_his","y9_his","y6_geo","y9_geo"],
-			"homeroom": "y7_hr",
+			"homeroom": null,
             "workspace": "workspace_8096"
         },
         "5690": {
@@ -427,7 +427,7 @@ const data = {
 	     "7591": {
             "name": "Youssef Torjmane",
 			"subjects": ["y6_sc","y9_sc"],
-			"homeroom": "y6B_hr",
+			"homeroom": "y7_hr",
             "workspace": "workspace_7591"
         }
     },
