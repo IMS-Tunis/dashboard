@@ -283,7 +283,7 @@ const data = {
 
         "7618": {
             "name": "ghada jemaa",
-			"subjects": ["y10_en", "y11_en", "y12_en", "y13_en", "y12_gp"],
+			"subjects": ["y10_en", "y11_en", "y12_en", "y13_en", "y10_gp", "y11_gp"],
 			"homeroom": "y13_hr",
             "workspace": "workspace_7618"
         },
