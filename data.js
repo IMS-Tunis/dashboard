@@ -367,7 +367,7 @@ const data = {
         },
         "5566": {
             "name": "Salma Ben Azzouz",
-			"subjects": ["y3_ma", "y4_ma", "y5_ma", "y6A_ma"],
+			"subjects": ["y4_ma", "y5_ma", "y6_ma"],
 			"homeroom": "y6_hr",
             "workspace": "workspace_5566"
         },
